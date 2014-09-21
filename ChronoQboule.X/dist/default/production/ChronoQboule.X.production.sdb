@@ -125,9 +125,9 @@
 [v ___asftsub __asftsub `(f  1 e 3 0 ]
 "6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\aslmul.c
 [v ___aslmul __aslmul `(ul  1 e 4 0 ]
-"7 C:\Users\Robin\MPLABXProjects\ChronoQboule.X\converter.c
+"7 C:\Users\Robin\Documents\GitHub\ChronoQboule\ChronoQboule.X\converter.c
 [v _segments segments `(v  1 e 0 0 ]
-"53 C:\Users\Robin\MPLABXProjects\ChronoQboule.X\main.c
+"53 C:\Users\Robin\Documents\GitHub\ChronoQboule\ChronoQboule.X\main.c
 [v _low_interrupt low_interrupt `II(v  1 e 0 0 ]
 "76
 [v _main main `(i  1 e 2 0 ]
@@ -165,7 +165,7 @@
 [v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
 "44739
 [v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
-"37 C:\Users\Robin\MPLABXProjects\ChronoQboule.X\main.c
+"37 C:\Users\Robin\Documents\GitHub\ChronoQboule\ChronoQboule.X\main.c
 [v _milliSec milliSec `uc  1 e 1 0 ]
 "38
 [v _centiSec centiSec `uc  1 e 1 0 ]
