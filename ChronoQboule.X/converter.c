@@ -21,16 +21,16 @@ void segments(char figure) {
             
 switch(figure)
     {
-        case 0 :    PORTB =0b1111110; break;
-        case 1 :    PORTB =0b0110000; break;
-        case 2 :    PORTB =0b1101101; break;
-        case 3 :    PORTB =0b1111001; break;
-        case 4 :    PORTB =0b0110011; break;
-        case 5 :    PORTB =0b1011011; break;
-        case 6 :    PORTB =0b1011111; break;
-        case 7 :    PORTB =0b1110000; break;
-        case 8 :    PORTB =0b1111111; break;
-        case 9 :    PORTB =0b1111011; break;
+        case 0 :    PORTC =0b1111110; break;
+        case 1 :    PORTC =0b0110000; break;
+        case 2 :    PORTC =0b1101101; break;
+        case 3 :    PORTC =0b1111001; break;
+        case 4 :    PORTC =0b0110011; break;
+        case 5 :    PORTC =0b1011011; break;
+        case 6 :    PORTC =0b1011111; break;
+        case 7 :    PORTC =0b1110000; break;
+        case 8 :    PORTC =0b1111111; break;
+        case 9 :    PORTC =0b1111011; break;
         default : ;
     }    
 
