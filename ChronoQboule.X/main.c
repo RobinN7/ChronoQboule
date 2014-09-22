@@ -85,22 +85,32 @@ int main(int argc, char** argv) {
 
     while (1) {
 
-        if (Bouton == 1 && old_state == 0) {
+        if ((PORTBbits.RB5 == 1) /*&& (old_state == 0)*/) {
             old_state = 1;
-            if (stance < 4) {
+            PORTBbits.RB4 = 1;
+            if (stance < 2) {
                 stance++;
             } else {
                 stance = 0;
             }
-        } else if (Bouton == 0 && old_state == 1) {
+        } 
+        else if ((PORTBbits.RB5 == 0 ) /*&& (old_state == 1)*/) {
+            PORTBbits.RB4 = 1;
             old_state = 0;
         }
         time_converter(time);
 
         switch (stance) {
-            case 0 : ; //affichage d'accueil en attente d'un appui
-            case 1 : ; //départ du chrono
-            case 2 : ; //arret du chrono
+            case 0:
+            {
+                time = 0;
+
+            }
+                break; //affichage d'accueil en attente d'un appui
+            case 1:;
+                break; //départ du chrono
+            case 2:;
+                break; //arret du chrono
         }
     }
 
@@ -113,14 +123,19 @@ void rafraichissement(int afficheur) {
     switch (afficheur) {
 
         case 0: PORTA = 0b00000001;
+        segments(dizaine_seconde);
             break;
         case 1: PORTA = 0b00000010;
+        segments(seconde);
             break;
         case 2: PORTA = 0b00000100;
+        segments(centaine_milliseconde);
             break;
         case 3: PORTA = 0b00001000;
+        segments(dizaine_milliseconde);
             break;
         case 4: PORTA = 0b00100000;
+        segments(milliseconde);
             break;
         default:;
     }
@@ -132,9 +147,12 @@ void initialisation(void) {
     ///////////////////////CONFIGURATION///////////////////////////////////////////
     INTCON = 0b11100000;
 
-    TRISA = 0; // mets les ports A en sortie
+    TRISA =0; // mets les ports A en sortie
     TRISC = 0; // mets les ports C en sortie
-    TRISAbits.TRISA5 = 1; // entrée pour le bouton
+    TRISB = 1; // entrée pour le bouton
+    TRISBbits.TRISB4 = 0;
+   // ANSELH = 0; //configure les entrées, 0=digitales
+    //ANSEL = 0; //configure les entrées, 0=digitales
 
     //Setup Timer0 la persistance retinienne
     T0PS0 = 0; //Prescaler is divide by 256
@@ -146,7 +164,6 @@ void initialisation(void) {
     TMR0IE = 1; //Enable TIMER0 Interrupt
     PEIE = 1; //Enable Peripheral Interrupt
     GIE = 1; //Enable INTs globally
-
 
     TMR0ON = 1; //Now start the timer!
 

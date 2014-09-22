@@ -1,5 +1,10 @@
-_refresh: CODE, 160 0 82
-_main: CODE, 242 0 34
-__initialization: CODE, 276 0 12
-_low_interrupt: CODE, 8 0 148
-Total: 276
+___awdiv: CODE, 386 0 164
+_initialisation: CODE, 1018 0 40
+___awmod: CODE, 550 0 144
+_segments: CODE, 694 0 128
+_main: CODE, 934 0 84
+__initialization: CODE, 1058 0 12
+_rafraichissement: CODE, 822 0 112
+_low_interrupt: CODE, 8 0 172
+_time_converter: CODE, 184 0 202
+Total: 1058
