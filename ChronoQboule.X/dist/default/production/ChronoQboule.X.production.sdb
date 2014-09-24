@@ -125,55 +125,47 @@
 [v ___asftsub __asftsub `(f  1 e 3 0 ]
 "6 /opt/microchip/xc8/v1.32/sources/pic18/aslmul.c
 [v ___aslmul __aslmul `(ul  1 e 4 0 ]
-"7 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c
+"15 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c
 [v _segments segments `(v  1 e 0 0 ]
-"59 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c
+"54 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c
 [v _low_interrupt low_interrupt `II(v  1 e 0 0 ]
-"80
+"94
 [v _main main `(i  1 e 2 0 ]
-"120
+"148
 [v _rafraichissement rafraichissement `(v  1 e 0 0 ]
-"146
+"179
 [v _initialisation initialisation `(v  1 e 0 0 ]
-"173
+"221
 [v _time_converter time_converter `(v  1 e 0 0 ]
 "32440 /opt/microchip/xc8/v1.32/include/pic18f25k80.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
-[s S33 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
-"32552
-[s S42 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 CCP2_PA2 1 0 :1:3 
-]
-[u S45 . 1 `S33 1 . 1 0 `S42 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES45  1 e 1 @3969 ]
 "32601
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+[s S81 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"32630
+[s S90 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+]
+[s S93 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S96 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S99 . 1 `S81 1 . 1 0 `S90 1 . 1 0 `S93 1 . 1 0 `S96 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES99  1 e 1 @3970 ]
 "33494
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "33550
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S76 . 1 `uc 1 TRISB0 1 0 :1:0 
-`uc 1 TRISB1 1 0 :1:1 
-`uc 1 TRISB2 1 0 :1:2 
-`uc 1 TRISB3 1 0 :1:3 
-`uc 1 TRISB4 1 0 :1:4 
-`uc 1 TRISB5 1 0 :1:5 
-`uc 1 TRISB6 1 0 :1:6 
-`uc 1 TRISB7 1 0 :1:7 
-]
-"33567
-[u S85 . 1 `S76 1 . 1 0 ]
-"33567
-"33567
-[v _TRISBbits TRISBbits `VES85  1 e 1 @3987 ]
 "33611
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 "38720
@@ -203,84 +195,91 @@
 [v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
 "44739
 [v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
-"40 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c
+"34 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c
 [v _time time `i  1 e 2 0 ]
-"42
+"36
 [v _milliseconde milliseconde `uc  1 e 1 0 ]
-"43
+"37
 [v _dizaine_milliseconde dizaine_milliseconde `uc  1 e 1 0 ]
-"44
+"38
 [v _centaine_milliseconde centaine_milliseconde `uc  1 e 1 0 ]
-"45
+"39
 [v _seconde seconde `uc  1 e 1 0 ]
-"46
+"40
 [v _dizaine_seconde dizaine_seconde `uc  1 e 1 0 ]
-"47
+"41
 [v _balayage balayage `uc  1 e 1 0 ]
-"48
+"42
 [v _front_montant front_montant `uc  1 e 1 0 ]
-"49
+"43
 [v _old_state old_state `uc  1 e 1 0 ]
-"50
+"44
 [v _stance stance `uc  1 e 1 0 ]
-"80
+"45
+[v _valeur valeur `uc  1 e 1 0 ]
+"94
 [v _main main `(i  1 e 2 0 ]
 {
-[v main@argc argc `i  1 p 2 35 ]
-[v main@argv argv `*.2*.2uc  1 p 3 37 ]
-"118
+"105
+[v main@k k `i  1 a 2 35 ]
+"103
+[v main@a a `i  1 a 2 37 ]
+"94
+[v main@argc argc `i  1 p 2 30 ]
+[v main@argv argv `*.2*.2uc  1 p 3 32 ]
+"146
 } 0
-"173
+"179
+[v _initialisation initialisation `(v  1 e 0 0 ]
+{
+"219
+} 0
+"54
+[v _low_interrupt low_interrupt `II(v  1 e 0 0 ]
+{
+"73
+} 0
+"221
 [v _time_converter time_converter `(v  1 e 0 0 ]
 {
-[v time_converter@time time `i  1 p 2 33 ]
-"180
+[v time_converter@time time `i  1 p 2 14 ]
+"228
 } 0
 "8 /opt/microchip/xc8/v1.32/sources/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "11
-[v ___awmod@sign sign `uc  1 a 1 32 ]
-[v ___awmod@counter counter `uc  1 a 1 31 ]
+[v ___awmod@sign sign `uc  1 a 1 13 ]
+[v ___awmod@counter counter `uc  1 a 1 12 ]
 "8
-[v ___awmod@dividend dividend `i  1 p 2 27 ]
-[v ___awmod@divisor divisor `i  1 p 2 29 ]
+[v ___awmod@dividend dividend `i  1 p 2 8 ]
+[v ___awmod@divisor divisor `i  1 p 2 10 ]
 "35
 } 0
 "8 /opt/microchip/xc8/v1.32/sources/common/awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "11
-[v ___awdiv@quotient quotient `i  1 a 2 25 ]
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
 "12
-[v ___awdiv@sign sign `uc  1 a 1 24 ]
-[v ___awdiv@counter counter `uc  1 a 1 23 ]
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
 "8
-[v ___awdiv@dividend dividend `i  1 p 2 19 ]
-[v ___awdiv@divisor divisor `i  1 p 2 21 ]
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
 "42
 } 0
-"146 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c
-[v _initialisation initialisation `(v  1 e 0 0 ]
-{
-"171
-} 0
-"59
-[v _low_interrupt low_interrupt `II(v  1 e 0 0 ]
-{
-"78
-} 0
-"120
+"148 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c
 [v _rafraichissement rafraichissement `(v  1 e 0 0 ]
 {
 [v rafraichissement@afficheur afficheur `i  1 p 2 1 ]
-"142
+"175
 } 0
-"7 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c
+"15 /home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c
 [v _segments segments `(v  1 e 0 0 ]
 {
 [v segments@figure figure `uc  1 a 1 wreg ]
 [v segments@figure figure `uc  1 a 1 wreg ]
 [v segments@figure figure `uc  1 a 1 0 ]
-"37
+"129
 } 0

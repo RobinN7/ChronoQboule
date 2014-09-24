@@ -1,6 +1,21 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"32601 /opt/microchip/xc8/v1.32/include/pic18f25k80.h
-[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
+"32607 /opt/microchip/xc8/v1.32/include/pic18f25k80.h
+[s S2130 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2130 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"32617
+[s S2131 :1 `uc 1 :1 `uc 1 ]
+[n S2131 . . CCP2 ]
+"32621
+[s S2132 :2 `uc 1 :1 `uc 1 ]
+[n S2132 . . PA1 ]
+"32625
+[s S2133 :1 `uc 1 :1 `uc 1 ]
+[n S2133 . . PA2 ]
+"32606
+[u S2129 `S2130 1 `S2131 1 `S2132 1 `S2133 1 ]
+[n S2129 . . . . . ]
+"32630
+[v _PORTCbits `VS2129 ~T0 @X0 0 e@3970 ]
 [; ;stdio.h: 8: typedef int ptrdiff_t;
 [; ;stdio.h: 9: typedef unsigned size_t;
 [; ;stdio.h: 10: typedef unsigned short wchar_t;
@@ -17387,77 +17402,295 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 149: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 151: extern __nonreentrant void _delay3(unsigned char);
 [; ;converter.h: 21: void segments(char);
-"7 converter.c
+"15 converter.c
 [v _segments `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;converter.c: 7: void segments(char figure) {
+[; ;converter.c: 15: void segments(char figure) {
 [e :U _segments ]
 [v _figure `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;converter.c: 22: switch(figure)
-"22
-[e $U 2641  ]
-[; ;converter.c: 23: {
-"23
-{
-[; ;converter.c: 24: case 0 : PORTC =0b1111110; break;
-"24
-[e :U 2642 ]
-[e = _PORTC -> -> 126 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 25: case 1 : PORTC =0b0110000; break;
-"25
-[e :U 2643 ]
-[e = _PORTC -> -> 48 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 26: case 2 : PORTC =0b1101101; break;
-"26
-[e :U 2644 ]
-[e = _PORTC -> -> 109 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 27: case 3 : PORTC =0b1111001; break;
-"27
-[e :U 2645 ]
-[e = _PORTC -> -> 121 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 28: case 4 : PORTC =0b0110011; break;
-"28
-[e :U 2646 ]
-[e = _PORTC -> -> 51 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 29: case 5 : PORTC =0b1011011; break;
-"29
-[e :U 2647 ]
-[e = _PORTC -> -> 91 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 30: case 6 : PORTC =0b1011111; break;
-"30
-[e :U 2648 ]
-[e = _PORTC -> -> 95 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 31: case 7 : PORTC =0b1110000; break;
+[; ;converter.c: 31: switch (figure) {
 "31
-[e :U 2649 ]
-[e = _PORTC -> -> 112 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 32: case 8 : PORTC =0b1111111; break;
+[e $U 2641  ]
+{
+[; ;converter.c: 32: case 0:
 "32
-[e :U 2650 ]
-[e = _PORTC -> -> 127 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 33: case 9 : PORTC =0b1111011; break;
+[e :U 2642 ]
+[; ;converter.c: 33: PORTCbits.RC1 = 0;
 "33
-[e :U 2651 ]
-[e = _PORTC -> -> 123 `i `uc ]
-[e $U 2640  ]
-[; ;converter.c: 34: default : ;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;converter.c: 34: PORTCbits.RC2 = 0;
 "34
-[e :U 2652 ]
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;converter.c: 35: PORTCbits.RC3 = 0;
 "35
-}
-[; ;converter.c: 35: }
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;converter.c: 36: PORTCbits.RC4 = 0;
+"36
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;converter.c: 37: PORTCbits.RC5 = 0;
+"37
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
+[; ;converter.c: 38: PORTCbits.RC6 = 0;
+"38
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+[; ;converter.c: 39: PORTCbits.RC7 = 1;
+"39
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
+[; ;converter.c: 40: break;
+"40
 [e $U 2640  ]
-"22
+[; ;converter.c: 42: case 1:
+"42
+[e :U 2643 ]
+[; ;converter.c: 43: PORTCbits.RC1 = 1;
+"43
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;converter.c: 44: PORTCbits.RC2 = 0;
+"44
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;converter.c: 45: PORTCbits.RC3 = 0;
+"45
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;converter.c: 46: PORTCbits.RC4 = 1;
+"46
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;converter.c: 47: PORTCbits.RC5 = 1;
+"47
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
+[; ;converter.c: 48: PORTCbits.RC6 = 1;
+"48
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
+[; ;converter.c: 49: PORTCbits.RC7 = 1;
+"49
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
+[; ;converter.c: 50: break;
+"50
+[e $U 2640  ]
+[; ;converter.c: 51: case 2:
+"51
+[e :U 2644 ]
+[; ;converter.c: 52: PORTCbits.RC1 = 0;
+"52
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;converter.c: 53: PORTCbits.RC2 = 0;
+"53
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;converter.c: 54: PORTCbits.RC3 = 1;
+"54
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;converter.c: 55: PORTCbits.RC4 = 0;
+"55
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;converter.c: 56: PORTCbits.RC5 = 0;
+"56
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
+[; ;converter.c: 57: PORTCbits.RC6 = 1;
+"57
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
+[; ;converter.c: 58: PORTCbits.RC7 = 0;
+"58
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+[; ;converter.c: 59: break;
+"59
+[e $U 2640  ]
+[; ;converter.c: 60: case 3:
+"60
+[e :U 2645 ]
+[; ;converter.c: 61: PORTCbits.RC1 = 0;
+"61
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;converter.c: 62: PORTCbits.RC2 = 0;
+"62
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;converter.c: 63: PORTCbits.RC3 = 0;
+"63
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;converter.c: 64: PORTCbits.RC4 = 0;
+"64
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;converter.c: 65: PORTCbits.RC5 = 1;
+"65
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
+[; ;converter.c: 66: PORTCbits.RC6 = 1;
+"66
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
+[; ;converter.c: 67: PORTCbits.RC7 = 0;
+"67
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+[; ;converter.c: 68: break;
+"68
+[e $U 2640  ]
+[; ;converter.c: 70: case 4:
+"70
+[e :U 2646 ]
+[; ;converter.c: 71: PORTCbits.RC1 = 1;
+"71
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;converter.c: 72: PORTCbits.RC2 = 0;
+"72
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;converter.c: 73: PORTCbits.RC3 = 0;
+"73
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;converter.c: 74: PORTCbits.RC4 = 1;
+"74
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;converter.c: 75: PORTCbits.RC5 = 1;
+"75
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
+[; ;converter.c: 76: PORTCbits.RC6 = 0;
+"76
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+[; ;converter.c: 77: PORTCbits.RC7 = 0;
+"77
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+[; ;converter.c: 78: break;
+"78
+[e $U 2640  ]
+[; ;converter.c: 79: case 5:
+"79
+[e :U 2647 ]
+[; ;converter.c: 80: PORTCbits.RC1 = 0;
+"80
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;converter.c: 81: PORTCbits.RC2 = 1;
+"81
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;converter.c: 82: PORTCbits.RC3 = 0;
+"82
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;converter.c: 83: PORTCbits.RC4 = 0;
+"83
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;converter.c: 84: PORTCbits.RC5 = 1;
+"84
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
+[; ;converter.c: 85: PORTCbits.RC6 = 0;
+"85
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+[; ;converter.c: 86: PORTCbits.RC7 = 0;
+"86
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+[; ;converter.c: 88: break;
+"88
+[e $U 2640  ]
+[; ;converter.c: 89: case 6:
+"89
+[e :U 2648 ]
+[; ;converter.c: 90: PORTCbits.RC1 = 0;
+"90
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;converter.c: 91: PORTCbits.RC2 = 1;
+"91
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;converter.c: 92: PORTCbits.RC3 = 0;
+"92
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;converter.c: 93: PORTCbits.RC4 = 0;
+"93
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;converter.c: 94: PORTCbits.RC5 = 0;
+"94
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
+[; ;converter.c: 95: PORTCbits.RC6 = 0;
+"95
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+[; ;converter.c: 96: PORTCbits.RC7 = 0;
+"96
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+[; ;converter.c: 97: break;
+"97
+[e $U 2640  ]
+[; ;converter.c: 99: case 7:
+"99
+[e :U 2649 ]
+[; ;converter.c: 100: PORTCbits.RC1 = 0;
+"100
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;converter.c: 101: PORTCbits.RC2 = 0;
+"101
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;converter.c: 102: PORTCbits.RC3 = 0;
+"102
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;converter.c: 103: PORTCbits.RC4 = 1;
+"103
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;converter.c: 104: PORTCbits.RC5 = 1;
+"104
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
+[; ;converter.c: 105: PORTCbits.RC6 = 1;
+"105
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
+[; ;converter.c: 106: PORTCbits.RC7 = 1;
+"106
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
+[; ;converter.c: 107: break;
+"107
+[e $U 2640  ]
+[; ;converter.c: 108: case 8:
+"108
+[e :U 2650 ]
+[; ;converter.c: 109: PORTCbits.RC1 = 0;
+"109
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;converter.c: 110: PORTCbits.RC2 = 0;
+"110
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;converter.c: 111: PORTCbits.RC3 = 0;
+"111
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;converter.c: 112: PORTCbits.RC4 = 0;
+"112
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;converter.c: 113: PORTCbits.RC5 = 0;
+"113
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
+[; ;converter.c: 114: PORTCbits.RC6 = 0;
+"114
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+[; ;converter.c: 115: PORTCbits.RC7 = 0;
+"115
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+[; ;converter.c: 116: break;
+"116
+[e $U 2640  ]
+[; ;converter.c: 117: case 9:
+"117
+[e :U 2651 ]
+[; ;converter.c: 118: PORTCbits.RC1 = 0;
+"118
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;converter.c: 119: PORTCbits.RC2 = 0;
+"119
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;converter.c: 120: PORTCbits.RC3 = 0;
+"120
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;converter.c: 121: PORTCbits.RC4 = 0;
+"121
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;converter.c: 122: PORTCbits.RC5 = 1;
+"122
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
+[; ;converter.c: 123: PORTCbits.RC6 = 0;
+"123
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+[; ;converter.c: 124: PORTCbits.RC7 = 0;
+"124
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+[; ;converter.c: 125: break;
+"125
+[e $U 2640  ]
+[; ;converter.c: 126: default:;
+"126
+[e :U 2652 ]
+"127
+}
+[; ;converter.c: 127: }
+[e $U 2640  ]
+"31
 [e :U 2641 ]
 [e [\ _figure , $ -> -> 0 `i `uc 2642
  , $ -> -> 1 `i `uc 2643
@@ -17470,9 +17703,9 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 8 `i `uc 2650
  , $ -> -> 9 `i `uc 2651
  2652 ]
-"35
+"127
 [e :U 2640 ]
-[; ;converter.c: 37: }
-"37
+[; ;converter.c: 129: }
+"129
 [e :UE 2639 ]
 }

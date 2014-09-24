@@ -5,29 +5,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR0IF `Vb ~T0 @X0 0 e@32658 ]
 "38720
 [v _TMR0 `Vus ~T0 @X0 0 e@4054 ]
-"52 main.c
+"49 main.c
+[v _time_converter `(v ~T0 @X0 0 ef1`i ]
+"47
 [v _rafraichissement `(v ~T0 @X0 0 ef1`i ]
 [p mainexit ]
-"53
+"48
 [v _initialisation `(v ~T0 @X0 0 ef ]
-"32537 /opt/microchip/xc8/v1.32/include/pic18f25k80.h
-[s S2127 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2127 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"32547
-[s S2128 :3 `uc 1 :1 `uc 1 ]
-[n S2128 . . CCP2_PA2 ]
-"32536
-[u S2126 `S2127 1 `S2128 1 ]
-[n S2126 . . . ]
-"32552
-[v _PORTBbits `VS2126 ~T0 @X0 0 e@3969 ]
-"54 main.c
-[v _time_converter `(v ~T0 @X0 0 ef1`i ]
-"32440 /opt/microchip/xc8/v1.32/include/pic18f25k80.h
-[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
+"32601 /opt/microchip/xc8/v1.32/include/pic18f25k80.h
+[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
 "21 converter.h
 [v _segments `(v ~T0 @X0 0 ef1`uc ]
-"39500 /opt/microchip/xc8/v1.32/include/pic18f25k80.h
+"32440 /opt/microchip/xc8/v1.32/include/pic18f25k80.h
+[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
+"39500
 [v _INTCON `Vuc ~T0 @X0 0 e@4082 ]
 "33494
 [v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
@@ -35,14 +26,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
 "33550
 [v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"33556
-[s S2202 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2202 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
-"33555
-[u S2201 `S2202 1 ]
-[n S2201 . . ]
-"33567
-[v _TRISBbits `VS2201 ~T0 @X0 0 e@3987 ]
 "44631
 [v _T0PS0 `Vb ~T0 @X0 0 e@32424 ]
 "44633
@@ -17449,411 +17432,363 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 149: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 151: extern __nonreentrant void _delay3(unsigned char);
 [; ;converter.h: 21: void segments(char);
-"40 main.c
+"34 main.c
 [v _time `i ~T0 @X0 1 e ]
-[; ;main.c: 40: int time;
-"42
+[; ;main.c: 34: int time;
+"36
 [v _milliseconde `uc ~T0 @X0 1 e ]
 [i _milliseconde
 -> -> 0 `i `uc
 ]
-[; ;main.c: 42: char milliseconde = 0;
-"43
+[; ;main.c: 36: char milliseconde = 0;
+"37
 [v _dizaine_milliseconde `uc ~T0 @X0 1 e ]
 [i _dizaine_milliseconde
 -> -> 0 `i `uc
 ]
-[; ;main.c: 43: char dizaine_milliseconde = 0;
-"44
+[; ;main.c: 37: char dizaine_milliseconde = 0;
+"38
 [v _centaine_milliseconde `uc ~T0 @X0 1 e ]
 [i _centaine_milliseconde
 -> -> 0 `i `uc
 ]
-[; ;main.c: 44: char centaine_milliseconde = 0;
-"45
+[; ;main.c: 38: char centaine_milliseconde = 0;
+"39
 [v _seconde `uc ~T0 @X0 1 e ]
 [i _seconde
 -> -> 0 `i `uc
 ]
-[; ;main.c: 45: char seconde = 0;
-"46
+[; ;main.c: 39: char seconde = 0;
+"40
 [v _dizaine_seconde `uc ~T0 @X0 1 e ]
 [i _dizaine_seconde
 -> -> 0 `i `uc
 ]
-[; ;main.c: 46: char dizaine_seconde = 0;
-"47
+[; ;main.c: 40: char dizaine_seconde = 0;
+"41
 [v _balayage `uc ~T0 @X0 1 e ]
 [i _balayage
 -> -> 0 `i `uc
 ]
-[; ;main.c: 47: char balayage = 0;
-"48
+[; ;main.c: 41: char balayage = 0;
+"42
 [v _front_montant `uc ~T0 @X0 1 e ]
 [i _front_montant
 -> -> 0 `i `uc
 ]
-[; ;main.c: 48: char front_montant = 0;
-"49
+[; ;main.c: 42: char front_montant = 0;
+"43
 [v _old_state `uc ~T0 @X0 1 e ]
 [i _old_state
 -> -> 0 `i `uc
 ]
-[; ;main.c: 49: char old_state = 0;
-"50
+[; ;main.c: 43: char old_state = 0;
+"44
 [v _stance `uc ~T0 @X0 1 e ]
 [i _stance
 -> -> 0 `i `uc
 ]
-[; ;main.c: 50: char stance = 0;
-[; ;main.c: 52: void rafraichissement(int);
-[; ;main.c: 53: void initialisation(void);
-[; ;main.c: 54: void time_converter(int);
-[v F19153 `(v ~T0 @X0 1 tf ]
-"59
-[v _low_interrupt `IF19153 ~T0 @X0 1 e ]
+[; ;main.c: 44: char stance = 0;
+"45
+[v _valeur `uc ~T0 @X0 1 e ]
+[i _valeur
+-> -> 0 `i `uc
+]
+[; ;main.c: 45: char valeur = 0;
+[; ;main.c: 47: void rafraichissement(int);
+[; ;main.c: 48: void initialisation(void);
+[; ;main.c: 49: void time_converter(int);
+[v F19154 `(v ~T0 @X0 1 tf ]
+"54
+[v _low_interrupt `IF19154 ~T0 @X0 1 e ]
 {
-[; ;main.c: 59: void interrupt low_interrupt() {
+[; ;main.c: 54: void interrupt low_interrupt() {
 [e :U _low_interrupt ]
 [f ]
-[; ;main.c: 61: if (TMR0IE && TMR0IF) {
-"61
+[; ;main.c: 56: if (TMR0IE && TMR0IF) {
+"56
 [e $ ! && _TMR0IE _TMR0IF 2640  ]
 {
-[; ;main.c: 63: TMR0 = 14;
-"63
+[; ;main.c: 58: TMR0 = 14;
+"58
 [e = _TMR0 -> -> 14 `i `us ]
-[; ;main.c: 64: if (front_montant && old_state) {
+[; ;main.c: 63: if (balayage == 4) {
+"63
+[e $ ! == -> _balayage `i -> 4 `i 2641  ]
+{
+[; ;main.c: 64: balayage = 0;
 "64
-[e $ ! && != -> _front_montant `i -> -> -> 0 `i `uc `i != -> _old_state `i -> -> -> 0 `i `uc `i 2641  ]
-{
-[; ;main.c: 65: time++;
-"65
-[e ++ _time -> 1 `i ]
-"66
-}
-[e :U 2641 ]
-[; ;main.c: 66: }
-[; ;main.c: 68: if (balayage == 4) {
-"68
-[e $ ! == -> _balayage `i -> 4 `i 2642  ]
-{
-[; ;main.c: 69: balayage = 0;
-"69
 [e = _balayage -> -> 0 `i `uc ]
-"70
+"65
 }
-[; ;main.c: 70: } else {
-[e $U 2643  ]
-[e :U 2642 ]
+[; ;main.c: 65: } else {
+[e $U 2642  ]
+[e :U 2641 ]
 {
-[; ;main.c: 71: balayage++;
-"71
+[; ;main.c: 66: balayage++;
+"66
 [e ++ _balayage -> -> 1 `i `uc ]
+"67
+}
+[e :U 2642 ]
+[; ;main.c: 67: }
+[; ;main.c: 68: time_converter(time);
+"68
+[e ( _time_converter (1 _time ]
+[; ;main.c: 69: rafraichissement(balayage);
+"69
+[e ( _rafraichissement (1 -> _balayage `i ]
+[; ;main.c: 71: TMR0IF = 0;
+"71
+[e = _TMR0IF -> -> 0 `i `b ]
 "72
 }
-[e :U 2643 ]
-[; ;main.c: 72: }
-[; ;main.c: 74: rafraichissement(balayage);
-"74
-[e ( _rafraichissement (1 -> _balayage `i ]
-[; ;main.c: 76: TMR0IF = 0;
-"76
-[e = _TMR0IF -> -> 0 `i `b ]
-"77
-}
 [e :U 2640 ]
-[; ;main.c: 77: }
-[; ;main.c: 78: }
-"78
+[; ;main.c: 72: }
+[; ;main.c: 73: }
+"73
 [e :UE 2639 ]
 }
-"80
+"94
 [v _main `(i ~T0 @X0 1 ef2`i`**uc ]
 {
-[; ;main.c: 80: int main(int argc, char** argv) {
+[; ;main.c: 94: int main(int argc, char** argv) {
 [e :U _main ]
 [v _argc `i ~T0 @X0 1 r1 ]
 [v _argv `**uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;main.c: 82: initialisation();
-"82
-[e ( _initialisation ..  ]
-[; ;main.c: 86: while (1) {
-"86
-[e :U 2646 ]
-{
-[; ;main.c: 88: if ((PORTBbits.RB5 == 1) ) {
-"88
-[e $ ! == -> . . _PORTBbits 0 5 `i -> 1 `i 2648  ]
-{
-[; ;main.c: 89: old_state = 1;
-"89
-[e = _old_state -> -> 1 `i `uc ]
-[; ;main.c: 90: PORTBbits.RB4 = 1;
-"90
-[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 91: if (stance < 2) {
-"91
-[e $ ! < -> _stance `i -> 2 `i 2649  ]
-{
-[; ;main.c: 92: stance++;
-"92
-[e ++ _stance -> -> 1 `i `uc ]
-"93
-}
-[; ;main.c: 93: } else {
-[e $U 2650  ]
-[e :U 2649 ]
-{
-[; ;main.c: 94: stance = 0;
-"94
-[e = _stance -> -> 0 `i `uc ]
+[; ;main.c: 95: initialisation();
 "95
-}
-[e :U 2650 ]
+[e ( _initialisation ..  ]
+[; ;main.c: 96: PORTC=0b11111111;
 "96
-}
-[; ;main.c: 95: }
-[; ;main.c: 96: }
-[e $U 2651  ]
-"97
-[e :U 2648 ]
-[; ;main.c: 97: else if ((PORTBbits.RB5 == 0 ) ) {
-[e $ ! == -> . . _PORTBbits 0 5 `i -> 0 `i 2652  ]
-{
-[; ;main.c: 98: PORTBbits.RB4 = 1;
-"98
-[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 99: old_state = 0;
-"99
-[e = _old_state -> -> 0 `i `uc ]
+[e = _PORTC -> -> 255 `i `uc ]
+[; ;main.c: 100: while (1) {
 "100
-}
-[e :U 2652 ]
-"101
-[e :U 2651 ]
-[; ;main.c: 100: }
-[; ;main.c: 101: time_converter(time);
-[e ( _time_converter (1 _time ]
-[; ;main.c: 103: switch (stance) {
-"103
-[e $U 2654  ]
+[e :U 2645 ]
 {
-[; ;main.c: 104: case 0:
+[; ;main.c: 103: for (int a=0 ; a <11111 ;a++)
+"103
+{
+[v _a `i ~T0 @X0 1 a ]
+[e = _a -> 0 `i ]
+[e $ < _a -> 11111 `i 2647  ]
+[e $U 2648  ]
 "104
-[e :U 2655 ]
-[; ;main.c: 105: {
+[e :U 2647 ]
+[; ;main.c: 104: {
+{
+[; ;main.c: 105: for( int k=0 ; k<7000;k++){}
 "105
 {
-[; ;main.c: 106: time = 0;
+[v _k `i ~T0 @X0 1 a ]
+[e = _k -> 0 `i ]
+[e $ < _k -> 7000 `i 2650  ]
+[e $U 2651  ]
+[e :U 2650 ]
+{
+}
+[e ++ _k -> 1 `i ]
+[e $ < _k -> 7000 `i 2650  ]
+[e :U 2651 ]
+}
+[; ;main.c: 106: time =a;
 "106
-[e = _time -> 0 `i ]
-"108
+[e = _time _a ]
+"107
 }
-[; ;main.c: 108: }
-[; ;main.c: 109: break;
-"109
-[e $U 2653  ]
-[; ;main.c: 110: case 1:;
-"110
-[e :U 2656 ]
-[; ;main.c: 111: break;
-"111
-[e $U 2653  ]
-[; ;main.c: 112: case 2:;
-"112
-[e :U 2657 ]
-[; ;main.c: 113: break;
-"113
-[e $U 2653  ]
-"114
-}
-[; ;main.c: 114: }
-[e $U 2653  ]
 "103
-[e :U 2654 ]
-[e [\ _stance , $ -> -> 0 `i `uc 2655
- , $ -> -> 1 `i `uc 2656
- , $ -> -> 2 `i `uc 2657
- 2653 ]
-"114
-[e :U 2653 ]
-"115
+[e ++ _a -> 1 `i ]
+[e $ < _a -> 11111 `i 2647  ]
+[e :U 2648 ]
+"107
 }
-[e :U 2645 ]
-"86
-[e $U 2646  ]
-[e :U 2647 ]
-[; ;main.c: 115: }
-[; ;main.c: 117: return (0);
-"117
+"143
+}
+[e :U 2644 ]
+"100
+[e $U 2645  ]
+[e :U 2646 ]
+[; ;main.c: 107: }
+[; ;main.c: 143: }
+[; ;main.c: 145: return (0);
+"145
 [e ) -> 0 `i ]
-[e $UE 2644  ]
-[; ;main.c: 118: }
-"118
-[e :UE 2644 ]
+[e $UE 2643  ]
+[; ;main.c: 146: }
+"146
+[e :UE 2643 ]
 }
-"120
+"148
 [v _rafraichissement `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;main.c: 120: void rafraichissement(int afficheur) {
+[; ;main.c: 148: void rafraichissement(int afficheur) {
 [e :U _rafraichissement ]
 [v _afficheur `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 123: switch (afficheur) {
-"123
-[e $U 2660  ]
+[; ;main.c: 151: switch (afficheur) {
+"151
+[e $U 2655  ]
 {
-[; ;main.c: 125: case 0: PORTA = 0b00000001;
-"125
-[e :U 2661 ]
-[e = _PORTA -> -> 1 `i `uc ]
-[; ;main.c: 126: segments(dizaine_seconde);
-"126
-[e ( _segments (1 _dizaine_seconde ]
-[; ;main.c: 127: break;
-"127
-[e $U 2659  ]
-[; ;main.c: 128: case 1: PORTA = 0b00000010;
-"128
-[e :U 2662 ]
-[e = _PORTA -> -> 2 `i `uc ]
-[; ;main.c: 129: segments(seconde);
-"129
-[e ( _segments (1 _seconde ]
-[; ;main.c: 130: break;
-"130
-[e $U 2659  ]
-[; ;main.c: 131: case 2: PORTA = 0b00000100;
-"131
-[e :U 2663 ]
-[e = _PORTA -> -> 4 `i `uc ]
-[; ;main.c: 132: segments(centaine_milliseconde);
-"132
-[e ( _segments (1 _centaine_milliseconde ]
-[; ;main.c: 133: break;
-"133
-[e $U 2659  ]
-[; ;main.c: 134: case 3: PORTA = 0b00001000;
-"134
-[e :U 2664 ]
-[e = _PORTA -> -> 8 `i `uc ]
-[; ;main.c: 135: segments(dizaine_milliseconde);
-"135
-[e ( _segments (1 _dizaine_milliseconde ]
-[; ;main.c: 136: break;
-"136
-[e $U 2659  ]
-[; ;main.c: 137: case 4: PORTA = 0b00100000;
-"137
-[e :U 2665 ]
-[e = _PORTA -> -> 32 `i `uc ]
-[; ;main.c: 138: segments(milliseconde);
-"138
+[; ;main.c: 153: case 0:
+"153
+[e :U 2656 ]
+[; ;main.c: 154: segments(milliseconde);
+"154
 [e ( _segments (1 _milliseconde ]
-[; ;main.c: 139: break;
-"139
-[e $U 2659  ]
-[; ;main.c: 140: default:;
-"140
-[e :U 2666 ]
-"141
-}
-[; ;main.c: 141: }
-[e $U 2659  ]
-"123
-[e :U 2660 ]
-[e [\ _afficheur , $ -> 0 `i 2661
- , $ -> 1 `i 2662
- , $ -> 2 `i 2663
- , $ -> 3 `i 2664
- , $ -> 4 `i 2665
- 2666 ]
-"141
+[; ;main.c: 155: PORTA = 0b00000001;
+"155
+[e = _PORTA -> -> 1 `i `uc ]
+[; ;main.c: 156: break;
+"156
+[e $U 2654  ]
+[; ;main.c: 157: case 1:
+"157
+[e :U 2657 ]
+[; ;main.c: 158: segments(dizaine_milliseconde);
+"158
+[e ( _segments (1 _dizaine_milliseconde ]
+[; ;main.c: 159: PORTA = 0b00000010;
+"159
+[e = _PORTA -> -> 2 `i `uc ]
+[; ;main.c: 160: break;
+"160
+[e $U 2654  ]
+[; ;main.c: 161: case 2:
+"161
+[e :U 2658 ]
+[; ;main.c: 162: segments(centaine_milliseconde);
+"162
+[e ( _segments (1 _centaine_milliseconde ]
+[; ;main.c: 163: PORTA = 0b00000100;
+"163
+[e = _PORTA -> -> 4 `i `uc ]
+[; ;main.c: 164: break;
+"164
+[e $U 2654  ]
+[; ;main.c: 165: case 3:
+"165
 [e :U 2659 ]
-[; ;main.c: 142: }
-"142
-[e :UE 2658 ]
+[; ;main.c: 166: segments(seconde);
+"166
+[e ( _segments (1 _seconde ]
+[; ;main.c: 167: PORTA = 0b00001000;
+"167
+[e = _PORTA -> -> 8 `i `uc ]
+[; ;main.c: 168: break;
+"168
+[e $U 2654  ]
+[; ;main.c: 169: case 4:
+"169
+[e :U 2660 ]
+[; ;main.c: 170: segments(dizaine_seconde);
+"170
+[e ( _segments (1 _dizaine_seconde ]
+[; ;main.c: 171: PORTA = 0b00100000;
+"171
+[e = _PORTA -> -> 32 `i `uc ]
+[; ;main.c: 172: break;
+"172
+[e $U 2654  ]
+[; ;main.c: 173: default:;
+"173
+[e :U 2661 ]
+"174
 }
-"146
+[; ;main.c: 174: }
+[e $U 2654  ]
+"151
+[e :U 2655 ]
+[e [\ _afficheur , $ -> 0 `i 2656
+ , $ -> 1 `i 2657
+ , $ -> 2 `i 2658
+ , $ -> 3 `i 2659
+ , $ -> 4 `i 2660
+ 2661 ]
+"174
+[e :U 2654 ]
+[; ;main.c: 175: }
+"175
+[e :UE 2653 ]
+}
+"179
 [v _initialisation `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 146: void initialisation(void) {
+[; ;main.c: 179: void initialisation(void) {
 [e :U _initialisation ]
 [f ]
-[; ;main.c: 148: INTCON = 0b11100000;
-"148
+[; ;main.c: 182: INTCON = 0b11100000;
+"182
 [e = _INTCON -> -> 224 `i `uc ]
-[; ;main.c: 150: TRISA =0;
-"150
+[; ;main.c: 184: TRISA = 0;
+"184
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 151: TRISC = 0;
-"151
+[; ;main.c: 185: TRISC = 0;
+"185
 [e = _TRISC -> -> 0 `i `uc ]
-[; ;main.c: 152: TRISB = 1;
-"152
-[e = _TRISB -> -> 1 `i `uc ]
-[; ;main.c: 153: TRISBbits.TRISB4 = 0;
-"153
-[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 158: T0PS0 = 0;
-"158
+[; ;main.c: 186: TRISB = 0;
+"186
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 187: PORTC = 0b00000000;
+"187
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;main.c: 207: T0PS0 = 0;
+"207
 [e = _T0PS0 -> -> 0 `i `b ]
-[; ;main.c: 159: T0PS1 = 1;
-"159
+[; ;main.c: 208: T0PS1 = 1;
+"208
 [e = _T0PS1 -> -> 1 `i `b ]
-[; ;main.c: 160: T0PS2 = 0;
-"160
+[; ;main.c: 209: T0PS2 = 0;
+"209
 [e = _T0PS2 -> -> 0 `i `b ]
-[; ;main.c: 161: PSA = 0;
-"161
+[; ;main.c: 210: PSA = 0;
+"210
 [e = _PSA -> -> 0 `i `b ]
-[; ;main.c: 162: T0CS = 0;
-"162
+[; ;main.c: 211: T0CS = 0;
+"211
 [e = _T0CS -> -> 0 `i `b ]
-[; ;main.c: 163: T08BIT = 1;
-"163
+[; ;main.c: 212: T08BIT = 1;
+"212
 [e = _T08BIT -> -> 1 `i `b ]
-[; ;main.c: 164: TMR0IE = 1;
-"164
+[; ;main.c: 213: TMR0IE = 1;
+"213
 [e = _TMR0IE -> -> 1 `i `b ]
-[; ;main.c: 165: PEIE = 1;
-"165
+[; ;main.c: 214: PEIE = 1;
+"214
 [e = _PEIE -> -> 1 `i `b ]
-[; ;main.c: 166: GIE = 1;
-"166
+[; ;main.c: 215: GIE = 1;
+"215
 [e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 168: TMR0ON = 1;
-"168
+[; ;main.c: 217: TMR0ON = 1;
+"217
 [e = _TMR0ON -> -> 1 `i `b ]
-[; ;main.c: 171: }
-"171
-[e :UE 2667 ]
+[; ;main.c: 219: }
+"219
+[e :UE 2662 ]
 }
-"173
+"221
 [v _time_converter `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;main.c: 173: void time_converter(int time) {
+[; ;main.c: 221: void time_converter(int time) {
 [e :U _time_converter ]
 [v _time `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 174: milliseconde = time % 10;
-"174
+[; ;main.c: 222: milliseconde = time % 10;
+"222
 [e = _milliseconde -> % _time -> 10 `i `uc ]
-[; ;main.c: 175: dizaine_milliseconde = (time / 10) % 10;
-"175
+[; ;main.c: 223: dizaine_milliseconde = (time / 10) % 10;
+"223
 [e = _dizaine_milliseconde -> % / _time -> 10 `i -> 10 `i `uc ]
-[; ;main.c: 176: centaine_milliseconde = (time / 100) % 10;
-"176
+[; ;main.c: 224: centaine_milliseconde = (time / 100) % 10;
+"224
 [e = _centaine_milliseconde -> % / _time -> 100 `i -> 10 `i `uc ]
-[; ;main.c: 177: seconde = (time / 1000) % 10;
-"177
+[; ;main.c: 225: seconde = (time / 1000) % 10;
+"225
 [e = _seconde -> % / _time -> 1000 `i -> 10 `i `uc ]
-[; ;main.c: 178: dizaine_seconde = (time / 10000) % 10;
-"178
+[; ;main.c: 226: dizaine_seconde = (time / 10000) % 10;
+"226
 [e = _dizaine_seconde -> % / _time -> 10000 `i -> 10 `i `uc ]
-[; ;main.c: 180: }
-"180
-[e :UE 2668 ]
+[; ;main.c: 228: }
+"228
+[e :UE 2663 ]
 }

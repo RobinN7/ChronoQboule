@@ -21905,7 +21905,7 @@ extern __nonreentrant void _delay3(unsigned char);
 # 21 "converter.h"
 void segments(char);
 
-# 40 "main.c"
+# 34 "main.c"
 int time;
 
 char milliseconde = 0;
@@ -21917,6 +21917,7 @@ char balayage = 0;
 char front_montant = 0;
 char old_state = 0;
 char stance = 0;
+char valeur = 0;
 
 void rafraichissement(int);
 void initialisation(void);
@@ -21930,57 +21931,39 @@ void interrupt low_interrupt() {
 if (TMR0IE && TMR0IF) {
 
 TMR0 = 14;
-if (front_montant && old_state) {
-time++;
-}
+
+
+
 
 if (balayage == 4) {
 balayage = 0;
 } else {
 balayage++;
 }
-
+time_converter(time);
 rafraichissement(balayage);
 
 TMR0IF = 0;
 }
 }
 
+# 94
 int main(int argc, char** argv) {
-
 initialisation();
+PORTC=0b11111111;
 
 
 
 while (1) {
 
-if ((PORTBbits.RB5 == 1) ) {
-old_state = 1;
-PORTBbits.RB4 = 1;
-if (stance < 2) {
-stance++;
-} else {
-stance = 0;
-}
-}
-else if ((PORTBbits.RB5 == 0 ) ) {
-PORTBbits.RB4 = 1;
-old_state = 0;
-}
-time_converter(time);
 
-switch (stance) {
-case 0:
+for (int a=0 ; a <11111 ;a++)
 {
-time = 0;
+for( int k=0 ; k<7000;k++){}
+time =a;
+}
 
-}
-break;
-case 1:;
-break;
-case 2:;
-break;
-}
+# 143
 }
 
 return (0);
@@ -21991,20 +21974,25 @@ void rafraichissement(int afficheur) {
 
 switch (afficheur) {
 
-case 0: PORTA = 0b00000001;
-segments(dizaine_seconde);
-break;
-case 1: PORTA = 0b00000010;
-segments(seconde);
-break;
-case 2: PORTA = 0b00000100;
-segments(centaine_milliseconde);
-break;
-case 3: PORTA = 0b00001000;
-segments(dizaine_milliseconde);
-break;
-case 4: PORTA = 0b00100000;
+case 0:
 segments(milliseconde);
+PORTA = 0b00000001;
+break;
+case 1:
+segments(dizaine_milliseconde);
+PORTA = 0b00000010;
+break;
+case 2:
+segments(centaine_milliseconde);
+PORTA = 0b00000100;
+break;
+case 3:
+segments(seconde);
+PORTA = 0b00001000;
+break;
+case 4:
+segments(dizaine_seconde);
+PORTA = 0b00100000;
 break;
 default:;
 }
@@ -22014,16 +22002,15 @@ default:;
 
 void initialisation(void) {
 
+
 INTCON = 0b11100000;
 
-TRISA =0;
+TRISA = 0;
 TRISC = 0;
-TRISB = 1;
-TRISBbits.TRISB4 = 0;
+TRISB = 0;
+PORTC = 0b00000000;
 
-
-
-
+# 207
 T0PS0 = 0;
 T0PS1 = 1;
 T0PS2 = 0;
@@ -22035,7 +22022,6 @@ PEIE = 1;
 GIE = 1;
 
 TMR0ON = 1;
-
 
 }
 

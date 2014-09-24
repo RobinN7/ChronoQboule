@@ -21901,23 +21901,106 @@ extern __nonreentrant void _delay3(unsigned char);
 # 21 "converter.h"
 void segments(char);
 
-# 7 "converter.c"
+# 15 "converter.c"
 void segments(char figure) {
 
-# 22
-switch(figure)
-{
-case 0 : PORTC =0b1111110; break;
-case 1 : PORTC =0b0110000; break;
-case 2 : PORTC =0b1101101; break;
-case 3 : PORTC =0b1111001; break;
-case 4 : PORTC =0b0110011; break;
-case 5 : PORTC =0b1011011; break;
-case 6 : PORTC =0b1011111; break;
-case 7 : PORTC =0b1110000; break;
-case 8 : PORTC =0b1111111; break;
-case 9 : PORTC =0b1111011; break;
-default : ;
+# 31
+switch (figure) {
+case 0:
+PORTCbits.RC1 = 0;
+PORTCbits.RC2 = 0;
+PORTCbits.RC3 = 0;
+PORTCbits.RC4 = 0;
+PORTCbits.RC5 = 0;
+PORTCbits.RC6 = 0;
+PORTCbits.RC7 = 1;
+break;
+
+case 1:
+PORTCbits.RC1 = 1;
+PORTCbits.RC2 = 0;
+PORTCbits.RC3 = 0;
+PORTCbits.RC4 = 1;
+PORTCbits.RC5 = 1;
+PORTCbits.RC6 = 1;
+PORTCbits.RC7 = 1;
+break;
+case 2:
+PORTCbits.RC1 = 0;
+PORTCbits.RC2 = 0;
+PORTCbits.RC3 = 1;
+PORTCbits.RC4 = 0;
+PORTCbits.RC5 = 0;
+PORTCbits.RC6 = 1;
+PORTCbits.RC7 = 0;
+break;
+case 3:
+PORTCbits.RC1 = 0;
+PORTCbits.RC2 = 0;
+PORTCbits.RC3 = 0;
+PORTCbits.RC4 = 0;
+PORTCbits.RC5 = 1;
+PORTCbits.RC6 = 1;
+PORTCbits.RC7 = 0;
+break;
+
+case 4:
+PORTCbits.RC1 = 1;
+PORTCbits.RC2 = 0;
+PORTCbits.RC3 = 0;
+PORTCbits.RC4 = 1;
+PORTCbits.RC5 = 1;
+PORTCbits.RC6 = 0;
+PORTCbits.RC7 = 0;
+break;
+case 5:
+PORTCbits.RC1 = 0;
+PORTCbits.RC2 = 1;
+PORTCbits.RC3 = 0;
+PORTCbits.RC4 = 0;
+PORTCbits.RC5 = 1;
+PORTCbits.RC6 = 0;
+PORTCbits.RC7 = 0;
+
+break;
+case 6:
+PORTCbits.RC1 = 0;
+PORTCbits.RC2 = 1;
+PORTCbits.RC3 = 0;
+PORTCbits.RC4 = 0;
+PORTCbits.RC5 = 0;
+PORTCbits.RC6 = 0;
+PORTCbits.RC7 = 0;
+break;
+
+case 7:
+PORTCbits.RC1 = 0;
+PORTCbits.RC2 = 0;
+PORTCbits.RC3 = 0;
+PORTCbits.RC4 = 1;
+PORTCbits.RC5 = 1;
+PORTCbits.RC6 = 1;
+PORTCbits.RC7 = 1;
+break;
+case 8:
+PORTCbits.RC1 = 0;
+PORTCbits.RC2 = 0;
+PORTCbits.RC3 = 0;
+PORTCbits.RC4 = 0;
+PORTCbits.RC5 = 0;
+PORTCbits.RC6 = 0;
+PORTCbits.RC7 = 0;
+break;
+case 9:
+PORTCbits.RC1 = 0;
+PORTCbits.RC2 = 0;
+PORTCbits.RC3 = 0;
+PORTCbits.RC4 = 0;
+PORTCbits.RC5 = 1;
+PORTCbits.RC6 = 0;
+PORTCbits.RC7 = 0;
+break;
+default:;
 }
 
 }
