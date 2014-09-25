@@ -3,7 +3,8 @@
 
 
 # 10
-#pragma config XINST = OFF
+#pragma config XINST = OFF, SOSCSEL = DIG
+#pragma config FCMEN=ON, IESO=ON , WDTEN = OFF , EBTRB = OFF
 
 # 8 "/opt/microchip/xc8/v1.32/include/stdio.h"
 typedef int ptrdiff_t;
@@ -21905,23 +21906,17 @@ extern __nonreentrant void _delay3(unsigned char);
 # 21 "converter.h"
 void segments(char);
 
-# 34 "main.c"
-int time;
+# 32 "main.c"
+unsigned int time;
 
-char milliseconde = 0;
-char dizaine_milliseconde = 0;
-char centaine_milliseconde = 0;
-char seconde = 0;
-char dizaine_seconde = 0;
 char balayage = 0;
 char front_montant = 0;
 char old_state = 0;
-char stance = 0;
+char stance = 1;
 char valeur = 0;
 
 void rafraichissement(int);
 void initialisation(void);
-void time_converter(int);
 
 
 
@@ -21932,38 +21927,73 @@ if (TMR0IE && TMR0IF) {
 
 TMR0 = 14;
 
-
-
-
 if (balayage == 4) {
 balayage = 0;
 } else {
 balayage++;
 }
-time_converter(time);
 rafraichissement(balayage);
+time++;
 
 TMR0IF = 0;
 }
 }
 
-# 94
+# 99
 int main(int argc, char** argv) {
+
 initialisation();
-PORTC=0b11111111;
-
-
 
 while (1) {
 
+if ((PORTCbits.RC0 == 1) && (old_state == 0)) {
+old_state = 1;
 
-for (int a=0 ; a <11111 ;a++)
-{
-for( int k=0 ; k<7000;k++){}
-time =a;
+if(stance!=1){
+stance++;
+}
+for (int y =0 ; y<10000;y++){}
+
 }
 
-# 143
+if ((PORTCbits.RC0 == 0) && (old_state ==1)) {
+
+old_state = 0;
+
+if(stance==1){
+stance++;
+}
+for (int y =0 ; y<10000;y++){}
+
+}
+
+
+switch (stance) {
+case 1:
+{
+TMR0ON = 0;
+segments(0);
+for (int razdisplay = 0; razdisplay < 5; razdisplay++) {
+rafraichissement(razdisplay);
+}
+}
+break;
+case 2:
+{
+TMR0ON = 1;
+}
+break;
+case 3:
+{
+TMR0ON = 0;
+time = 0;
+stance=0;
+}
+break;
+default:;
+}
+
+
 }
 
 return (0);
@@ -21971,27 +22001,26 @@ return (0);
 
 void rafraichissement(int afficheur) {
 
-
 switch (afficheur) {
 
 case 0:
-segments(milliseconde);
+segments(time % 10);
 PORTA = 0b00000001;
 break;
 case 1:
-segments(dizaine_milliseconde);
+segments((time / 10) % 10);
 PORTA = 0b00000010;
 break;
 case 2:
-segments(centaine_milliseconde);
+segments((time / 100) % 10);
 PORTA = 0b00000100;
 break;
 case 3:
-segments(seconde);
+segments((time / 1000) % 10);
 PORTA = 0b00001000;
 break;
 case 4:
-segments(dizaine_seconde);
+segments((time / 10000) % 10);
 PORTA = 0b00100000;
 break;
 default:;
@@ -22003,14 +22032,27 @@ default:;
 void initialisation(void) {
 
 
-INTCON = 0b11100000;
-
+RCONbits.IPEN = 1;
+INTCON = 0b11111000;
+ADCON1 = 0x00;
 TRISA = 0;
-TRISC = 0;
-TRISB = 0;
-PORTC = 0b00000000;
+TRISB = 0b11111111;
+TRISC = 0b00000001;
 
-# 207
+TMR0ON = 0;
+segments(0);
+
+for (int razdisplay = 0; razdisplay < 5; razdisplay++) {
+rafraichissement(razdisplay);
+}
+
+
+
+
+ANCON0 = 0;
+INTEDG0 = 1;
+
+# 219
 T0PS0 = 0;
 T0PS1 = 1;
 T0PS2 = 0;
@@ -22021,15 +22063,6 @@ TMR0IE = 1;
 PEIE = 1;
 GIE = 1;
 
-TMR0ON = 1;
 
 }
 
-void time_converter(int time) {
-milliseconde = time % 10;
-dizaine_milliseconde = (time / 10) % 10;
-centaine_milliseconde = (time / 100) % 10;
-seconde = (time / 1000) % 10;
-dizaine_seconde = (time / 10000) % 10;
-
-}

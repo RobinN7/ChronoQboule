@@ -21901,10 +21901,10 @@ extern __nonreentrant void _delay3(unsigned char);
 # 21 "converter.h"
 void segments(char);
 
-# 15 "converter.c"
+# 8 "converter.c"
 void segments(char figure) {
 
-# 31
+# 24
 switch (figure) {
 case 0:
 PORTCbits.RC1 = 0;

@@ -7,16 +7,14 @@
 
 //configuration
 
-#pragma config XINST = OFF
-//#pragma config FOSC = INTIO2
-
+#pragma config XINST = OFF, SOSCSEL = DIG
+#pragma config FCMEN=ON, IESO=ON , WDTEN = OFF , EBTRB = OFF
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <p18f25k80.h>
 #include <xc.h>
 #include <timers.h>
-#include <p18cxxx.h>
 #include <portb.h>
 #include "converter.h"
 
@@ -29,24 +27,18 @@
 #define Afficheur5 PORTAbits.RA5
 
 
-////////////////////////////////VARIABLES GLOBALES////////////////////////////////////////////
+////////////////////////////////VARIABLES GLOBALES//////////////////////////////
 
-int time;
+unsigned int time;
 
-char milliseconde = 0;
-char dizaine_milliseconde = 0;
-char centaine_milliseconde = 0;
-char seconde = 0;
-char dizaine_seconde = 0;
 char balayage = 0;
 char front_montant = 0;
 char old_state = 0;
-char stance = 0;
+char stance = 1;
 char valeur = 0;
 
 void rafraichissement(int);
 void initialisation(void);
-void time_converter(int);
 
 
 //Main Interrupt Service Routine (ISR)
@@ -56,88 +48,106 @@ void interrupt low_interrupt() {
     if (TMR0IE && TMR0IF) {
         //TMR0 Overflow ISR
         TMR0 = 14; ///offset
-      //  if (front_montant && old_state) {
-        //    time++;
-       // }
 
         if (balayage == 4) {
             balayage = 0;
         } else {
             balayage++; //Increment Over Flow Counter
         }
-        time_converter(time);
         rafraichissement(balayage);
+        time++;
         //Clear Flag
         TMR0IF = 0;
     }
 }
+
 /*
-void interrupt bouton(){
+void interrupt bouton() {
 
-    if(INTCONbits.INT0IF == 1) {
-        
-        PORTBbits.RB3 =~ PORTBbits.RB3;
+    if (INTCONbits.INT0IF) {
 
-    }
-    INTCONbits.INT0IF = 0;
-
-}
-*/
-
-
-
-
-
-
-
-
-int main(int argc, char** argv) {
-    initialisation();
-    PORTC=0b11111111;
-
-
-
-    while (1) {
-       // PORTA=0b00000000;
-        //PORTA=0b11111111;
-        for (int a=0 ; a <11111 ;a++)
-        {
-        for( int k=0 ; k<7000;k++){}
-        time =a;
-        }
-
-       // if ((PORTCbits.RC0 == 1) ) {
-         //   PORTBbits.RB3 = 1;
-          //  old_state = 1;
-         /*
-            if (stance < 2) {
-                stance++;
-            } else {
-                stance = 0;
-            }*/
-       // }
-       // else if ((PORTCbits.RC0 == 0 ) ) {
-       //     PORTBbits.RB3 = 0;
-       //     old_state = 0;
-       // }
-             
-        /*
-        time_converter(time);
+        stance = 1;
 
         switch (stance) {
             case 0:
             {
-                time = 0;
-
+                TMR0ON = 0;
+                segments(0);
+                for (int razdisplay=0; razdisplay < 5; razdisplay++) {
+                    rafraichissement(razdisplay);
+                }
             }
                 break; //affichage d'accueil en attente d'un appui
-            case 1:;
+            case 1:
+            {
+                time = 0;
+                TMR0ON = 1; //Now start the timer!
+            }
                 break; //départ du chrono
-            case 2:;
+            case 2:
+            {
+                TMR0ON = 0;
+            }
                 break; //arret du chrono
-            default : ;
+            default:;
         }
-*/
+        INTCONbits.INT0IF = 0;
+    }
+
+}
+ */
+int main(int argc, char** argv) {
+
+    initialisation();
+
+    while (1) {
+
+        if ((PORTCbits.RC0 == 1) && (old_state == 0)) {
+            old_state = 1;
+
+            if(stance!=1){
+            stance++;
+            }
+            for (int y =0 ; y<10000;y++){}
+            
+        }
+        
+        if ((PORTCbits.RC0 == 0) && (old_state ==1)) {
+
+            old_state = 0;
+
+            if(stance==1){
+            stance++;
+            }
+            for (int y =0 ; y<10000;y++){}
+            
+        }
+
+
+            switch (stance) {
+                case 1:
+                {
+                    TMR0ON = 0;
+                    segments(0);
+                    for (int razdisplay = 0; razdisplay < 5; razdisplay++) {
+                        rafraichissement(razdisplay);
+                    }
+                }
+                    break; //affichage d'accueil en attente d'un appui
+                case 2:
+                {
+                    TMR0ON = 1; //Now start the timer!
+                }
+                    break; //départ du chrono
+                case 3:
+                {
+                    TMR0ON = 0;
+                    time = 0;
+                    stance=0;
+                }
+                    break; //arret du chrono
+                default:;
+            }
 
 
     }
@@ -147,28 +157,27 @@ int main(int argc, char** argv) {
 
 void rafraichissement(int afficheur) {
 
-
     switch (afficheur) {
 
         case 0:
-        segments(milliseconde);
-        PORTA = 0b00000001;
+            segments(time % 10);
+            PORTA = 0b00000001;
             break;
-        case 1: 
-        segments(dizaine_milliseconde);
-        PORTA = 0b00000010;
+        case 1:
+            segments((time / 10) % 10);
+            PORTA = 0b00000010;
             break;
-        case 2: 
-        segments(centaine_milliseconde);
-        PORTA = 0b00000100;
+        case 2:
+            segments((time / 100) % 10);
+            PORTA = 0b00000100;
             break;
-        case 3: 
-        segments(seconde);
-        PORTA = 0b00001000;
+        case 3:
+            segments((time / 1000) % 10);
+            PORTA = 0b00001000;
             break;
-        case 4: 
-        segments(dizaine_seconde);
-        PORTA = 0b00100000;
+        case 4:
+            segments((time / 10000) % 10);
+            PORTA = 0b00100000;
             break;
         default:;
     }
@@ -178,32 +187,35 @@ void rafraichissement(int afficheur) {
 
 void initialisation(void) {
     //unsigned char config=0;
-    ///////////////////////CONFIGURATION///////////////////////////////////////////
-    INTCON = 0b11100000;
+    ///////////////////////CONFIGURATION////////////////////////////////////////
+    RCONbits.IPEN = 1;
+    INTCON = 0b11111000;
+    ADCON1 = 0x00;
+    TRISA = 0; // met les ports A en sortie
+    TRISB = 0b11111111; // met le port B en entrée (bouton sur RB0)
+    TRISC = 0b00000001; // met le port C en sortie sauf RC0 (pin qui sert à rien)
+    ///////////////////////INITIALISATION///////////////////////////////////////
+    TMR0ON = 0;
+    segments(0);
 
-    TRISA = 0; // mets les ports A en sortie
-    TRISC = 0; // mets les ports C en sortie sauf le bouton en entrée (RC0)
-    TRISB = 0; // entrée pour le bouton
-    PORTC = 0b00000000;
+    for (int razdisplay = 0; razdisplay < 5; razdisplay++) {
+        rafraichissement(razdisplay);
+    }
+    ////////////////////////////////////////////////////////////////////////////
+
+
+    ///////////////////INTERRUPTION PORT B /////////////////////////////////////
+    ANCON0 = 0;
+    INTEDG0 = 1; //INTEDG0: External Interrupt 0 Edge Select bit
+    //1 = Interrupt on rising edge
+    //0 = Interrupt on falling edge
+    //INTCON2=0b0
 
 
 
 
-    //WPUBbits.WPUB4 = 1;
-    // ANSELH = 0; //configure les entrées, 0=digitales
-    //ANSEL = 0; //configure les entrées, 0=digitales
 
-    /////////////////////INTERRUPTION SUR CHANGEMENT DETAT BOUTON//////////////////////////
-    //INT0IE=1; // enable interruption
-   // RBIE =1; // enable port B interrupt
-
-    //**************** configure INT0 with pullups enabled, falling edge *********************************
-	//	config = PORTB_CHANGE_INT_ON | FALLING_EDGE_INT | PORTB_PULLUPS_ON;
-	//    OpenRB0INT(config );					//configures INT0 & enables it
-
-   // INTCON2bits.RBPU = 0;
-
-    //Setup Timer0 la persistance retinienne
+    //Setup Timer0
     T0PS0 = 0; //Prescaler is divide by 256
     T0PS1 = 1;
     T0PS2 = 0;
@@ -214,15 +226,6 @@ void initialisation(void) {
     PEIE = 1; //Enable Peripheral Interrupt
     GIE = 1; //Enable INTs globally
 
-    TMR0ON = 1; //Now start the timer!
 
 }
 
-void time_converter(int time) {
-    milliseconde = time % 10;
-    dizaine_milliseconde = (time / 10) % 10;
-    centaine_milliseconde = (time / 100) % 10;
-    seconde = (time / 1000) % 10;
-    dizaine_seconde = (time / 10000) % 10;
-
-}

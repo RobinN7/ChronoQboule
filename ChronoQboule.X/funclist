@@ -1,10 +1,13 @@
-___awdiv: CODE, 610 0 164
-_initialisation: CODE, 1104 0 42
-___awmod: CODE, 774 0 144
-_segments: CODE, 180 0 228
-_main: CODE, 1030 0 74
-__initialization: CODE, 1146 0 12
-_rafraichissement: CODE, 918 0 112
-_low_interrupt: CODE, 8 0 168
-_time_converter: CODE, 408 0 202
-Total: 1146
+i2_segments: CODE, 984 0 228
+_initialisation: CODE, 1430 0 98
+i2_rafraichissement: CODE, 464 0 292
+i2___lwdiv: CODE, 1610 0 82
+_segments: CODE, 756 0 228
+_main: CODE, 1212 0 218
+i2___lwmod: CODE, 1758 0 66
+__initialization: CODE, 1824 0 30
+___lwdiv: CODE, 1528 0 82
+_rafraichissement: CODE, 172 0 292
+___lwmod: CODE, 1692 0 66
+_low_interrupt: CODE, 8 0 160
+Total: 1842

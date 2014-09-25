@@ -4,13 +4,6 @@
 #include <p18f25k80.h>
 #include "converter.h"
 
-#define SegmentA PORTCbits.RC1
-#define SegmentB PORTCbits.RC2
-#define SegmentC PORTCbits.RC3
-#define SegmentD PORTCbits.RC4
-#define SegmentE PORTCbits.RC5
-#define SegmentF PORTCbits.RC6
-#define SegmentG PORTCbits.RC7
 
 void segments(char figure) {
 

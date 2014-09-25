@@ -8,14 +8,14 @@
 #ifndef CONVERTER_H
 #define	CONVERTER_H
 
-#define segmentA PORTBbits_t.PORTB7
-#define segmentB PORTBbits_t.PORTB6
-#define segmentC PORTBbits_t.PORTB5
-#define segmentD PORTBbits_t.PORTB4
-#define segmentE PORTBbits_t.PORTB3
-#define segmentF PORTBbits_t.PORTB2
-#define segmentG PORTBbits_t.PORTB1
-#define segmentH PORTBbits_t.PORTB0
+
+#define SegmentA PORTCbits.RC1
+#define SegmentB PORTCbits.RC2
+#define SegmentC PORTCbits.RC3
+#define SegmentD PORTCbits.RC4
+#define SegmentE PORTCbits.RC5
+#define SegmentF PORTCbits.RC6
+#define SegmentG PORTCbits.RC7
 
 
 void segments(char);

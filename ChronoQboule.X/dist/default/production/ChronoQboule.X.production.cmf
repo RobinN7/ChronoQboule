@@ -11,30 +11,36 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/cgtzfc3Tq.obj
-end_init CODE 0 B0 B0 4 1
+$/tmp/cgtKT91sV.obj
+end_init CODE 0 A8 A8 4 1
 reset_vec CODE 0 0 0 4 1
 idloc IDLOC 0 200000 200000 8 1
 config CONFIG 0 300000 300000 E 1
 $dist/default/production/ChronoQboule.X.production.obj
-intcode CODE 0 8 8 A8 1
-text7 CODE 0 B4 B4 E4 1
-text6 CODE 0 396 396 70 1
-text5 CODE 0 262 262 A4 1
-text4 CODE 0 306 306 90 1
-text3 CODE 0 198 198 CA 1
-text1 CODE 0 450 450 2A 1
-cstackCOMRAM COMRAM 1 1 1 27 1
-bssCOMRAM COMRAM 1 28 28 C 1
-cinit CODE 0 47A 47A 16 1
-text0 CODE 0 406 406 4A 1
+intcode CODE 0 8 8 A0 1
+text10 CODE 0 64A 64A 52 1
+text9 CODE 0 6DE 6DE 42 1
+text8 CODE 0 3D8 3D8 E4 1
+text7 CODE 0 1D0 1D0 124 1
+text5 CODE 0 5F8 5F8 52 1
+text4 CODE 0 69C 69C 42 1
+text3 CODE 0 2F4 2F4 E4 1
+text2 CODE 0 AC AC 124 1
+text1 CODE 0 596 596 62 1
+text0 CODE 0 4BC 4BC DA 1
+cstackCOMRAM COMRAM 1 1 1 35 1
+cstackBANK0 BANK0 1 60 60 6 1
+dataCOMRAM COMRAM 1 3C 3C 1 1
+bssCOMRAM COMRAM 1 36 36 6 1
+cinit CODE 0 720 720 28 1
+idataCOMRAM CODE 0 748 748 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-BANK0 000060-0000FF 1
+BANK0 000066-0000FF 1
 BANK1 000100-0001FF 1
 BANK10 000A00-000AFF 1
 BANK11 000B00-000BFF 1
@@ -49,18 +55,19 @@ BANK6 000600-0006FF 1
 BANK7 000700-0007FF 1
 BANK8 000800-0008FF 1
 BANK9 000900-0009FF 1
-BIGRAM 000034-000E40 1
+BIGRAM 00003D-00005F 1
+BIGRAM 000066-000E40 1
 CODE 000004-000007 1
-CODE 000490-007FFF 1
-COMRAM 000034-00005F 1
+CODE 000749-007FFF 1
+COMRAM 00003D-00005F 1
 CONST 000004-000007 1
-CONST 000490-007FFF 1
+CONST 000749-007FFF 1
 EEDATA F00000-F003FF 1
 MEDIUMCONST 000F00-007FFF 1
-RAM 000060-000E40 1
+RAM 000066-000E40 1
 SFR 000E41-000FFF 1
 SMALLCONST 000F00-007FFF 1
-STACK 000060-0009FF 1
+STACK 000066-0009FF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -75,219 +82,376 @@ STACK 000060-0009FF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/ChronoQboule.X.production.obj
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":54 8 intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":219 8 intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":56 40 intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":58 46 intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":63 4E intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":64 56 intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":65 5A intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":66 5C intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":68 5E intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":69 6A intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":71 74 intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":73 76 intcode CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":15 B4 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":31 B6 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":32 B8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":33 B8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":34 BA text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":35 BC text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":36 BE text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":37 C0 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":38 C2 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":39 C4 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":40 C6 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":42 C8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":43 C8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":44 CA text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":45 CC text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":46 CE text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":47 D0 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":48 D2 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":49 D4 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":50 D6 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":51 D8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":52 D8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":53 DA text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":54 DC text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":55 DE text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":56 E0 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":57 E2 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":58 E4 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":59 E6 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":60 E8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":61 E8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":62 EA text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":63 EC text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":64 EE text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":65 F0 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":66 F2 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":67 F4 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":68 F6 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":70 F8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":71 F8 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":72 FA text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":73 FC text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":74 FE text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":75 100 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":76 102 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":77 104 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":78 106 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":79 108 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":80 108 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":81 10A text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":82 10C text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":83 10E text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":84 110 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":85 112 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":86 114 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":88 116 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":89 118 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":90 118 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":91 11A text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":92 11C text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":93 11E text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":94 120 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":95 122 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":96 124 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":97 126 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":99 128 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":100 128 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":101 12A text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":102 12C text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":103 12E text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":104 130 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":105 132 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":106 134 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":107 136 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":108 138 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":109 138 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":110 13A text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":111 13C text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":112 13E text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":113 140 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":114 142 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":115 144 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":116 146 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":117 148 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":118 148 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":119 14A text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":120 14C text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":121 14E text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":122 150 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":123 152 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":124 154 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":125 156 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":31 158 text7 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":221 198 text3 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":222 198 text3 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":223 1B0 text3 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":224 1DC text3 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":225 208 text3 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":226 234 text3 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":228 260 text3 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":8 262 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":14 262 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":15 266 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":16 27A text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":17 282 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":19 286 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":20 29A text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":21 2A2 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":23 2A6 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":24 2AE text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":25 2B6 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":26 2BA text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":27 2BC text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":28 2C2 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":26 2C4 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":31 2C8 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":32 2CE text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":33 2DA text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":34 2E2 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":36 2E4 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":37 2EA text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":39 2EE text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":40 2F4 text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awdiv.c":41 2FC text5 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":8 306 text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":13 306 text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":14 30A text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":15 31E text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":16 326 text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":18 32A text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":19 33E text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":20 346 text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":21 34E text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":22 352 text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":23 354 text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":24 35A text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":22 35C text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":27 360 text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":28 36C text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":29 374 text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":30 37A text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":32 37E text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":33 384 text4 CODE
-"/opt/microchip/xc8/v1.32/sources/common/awmod.c":34 38C text4 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":148 396 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":151 396 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":154 398 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":155 39E text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":156 3A2 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":158 3A4 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":159 3AA text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":160 3AE text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":162 3B0 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":163 3B6 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":164 3BA text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":166 3BC text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":167 3C2 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":168 3C6 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":170 3C8 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":171 3CE text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":172 3D2 text6 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":151 3D4 text6 CODE
-"/opt/microchip/xc8/v1.32/include/pic18f25k80.h":44739 406 text0 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":94 406 text0 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":95 406 text0 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":96 40A text0 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":103 40C text0 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":105 424 text0 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":106 442 text0 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":103 44A text0 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":179 450 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":182 450 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":184 454 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":185 458 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":186 45C text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":187 460 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":207 464 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":208 466 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":209 468 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":210 46A text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":211 46C text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":212 46E text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":213 470 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":214 472 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":215 474 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":217 476 text1 CODE
-"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":219 478 text1 CODE
-"/tmp/cgtRDPDN9":2050 47A cinit CODE
-"/tmp/cgtRDPDN9":2052 47A cinit CODE
-"/tmp/cgtRDPDN9":2055 47A cinit CODE
-"/tmp/cgtRDPDN9":2100 47A cinit CODE
-"/tmp/cgtRDPDN9":2101 47E cinit CODE
-"/tmp/cgtRDPDN9":2102 480 cinit CODE
-"/tmp/cgtRDPDN9":2103 480 cinit CODE
-"/tmp/cgtRDPDN9":2104 482 cinit CODE
-"/tmp/cgtRDPDN9":2105 484 cinit CODE
-"/tmp/cgtRDPDN9":2111 486 cinit CODE
-"/tmp/cgtRDPDN9":2113 486 cinit CODE
-"/tmp/cgtRDPDN9":2114 488 cinit CODE
-"/tmp/cgtRDPDN9":2115 48A cinit CODE
-"/tmp/cgtRDPDN9":2116 48C cinit CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":31 8 intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":46 8 intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":48 40 intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":50 46 intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":52 4E intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":53 56 intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":54 5A intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":55 5C intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":57 5E intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":58 68 intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":60 6C intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":62 6E intcode CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":158 AC text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":160 AC text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":163 AE text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":164 C8 text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":165 CC text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":167 CE text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":168 FC text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":169 100 text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":171 102 text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":172 130 text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":173 134 text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":175 136 text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":176 164 text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":177 168 text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":179 16A text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":180 198 text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":181 19C text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":160 19E text2 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":158 1D0 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":160 1D0 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":163 1D2 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":164 1EC text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":165 1F0 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":167 1F2 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":168 220 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":169 224 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":171 226 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":172 254 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":173 258 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":175 25A text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":176 288 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":177 28C text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":179 28E text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":180 2BC text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":181 2C0 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":160 2C2 text7 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":8 2F4 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":24 2F6 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":25 2F8 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":26 2F8 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":27 2FA text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":28 2FC text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":29 2FE text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":30 300 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":31 302 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":32 304 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":33 306 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":35 308 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":36 308 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":37 30A text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":38 30C text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":39 30E text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":40 310 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":41 312 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":42 314 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":43 316 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":44 318 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":45 318 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":46 31A text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":47 31C text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":48 31E text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":49 320 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":50 322 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":51 324 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":52 326 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":53 328 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":54 328 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":55 32A text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":56 32C text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":57 32E text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":58 330 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":59 332 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":60 334 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":61 336 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":63 338 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":64 338 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":65 33A text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":66 33C text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":67 33E text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":68 340 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":69 342 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":70 344 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":71 346 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":72 348 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":73 348 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":74 34A text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":75 34C text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":76 34E text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":77 350 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":78 352 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":79 354 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":81 356 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":82 358 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":83 358 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":84 35A text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":85 35C text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":86 35E text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":87 360 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":88 362 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":89 364 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":90 366 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":92 368 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":93 368 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":94 36A text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":95 36C text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":96 36E text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":97 370 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":98 372 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":99 374 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":100 376 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":101 378 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":102 378 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":103 37A text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":104 37C text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":105 37E text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":106 380 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":107 382 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":108 384 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":109 386 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":110 388 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":111 388 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":112 38A text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":113 38C text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":114 38E text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":115 390 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":116 392 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":117 394 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":118 396 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":24 398 text3 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":8 3D8 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":24 3DA text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":25 3DC text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":26 3DC text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":27 3DE text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":28 3E0 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":29 3E2 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":30 3E4 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":31 3E6 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":32 3E8 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":33 3EA text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":35 3EC text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":36 3EC text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":37 3EE text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":38 3F0 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":39 3F2 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":40 3F4 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":41 3F6 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":42 3F8 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":43 3FA text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":44 3FC text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":45 3FC text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":46 3FE text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":47 400 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":48 402 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":49 404 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":50 406 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":51 408 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":52 40A text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":53 40C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":54 40C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":55 40E text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":56 410 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":57 412 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":58 414 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":59 416 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":60 418 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":61 41A text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":63 41C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":64 41C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":65 41E text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":66 420 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":67 422 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":68 424 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":69 426 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":70 428 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":71 42A text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":72 42C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":73 42C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":74 42E text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":75 430 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":76 432 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":77 434 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":78 436 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":79 438 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":81 43A text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":82 43C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":83 43C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":84 43E text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":85 440 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":86 442 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":87 444 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":88 446 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":89 448 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":90 44A text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":92 44C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":93 44C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":94 44E text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":95 450 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":96 452 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":97 454 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":98 456 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":99 458 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":100 45A text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":101 45C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":102 45C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":103 45E text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":104 460 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":105 462 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":106 464 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":107 466 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":108 468 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":109 46A text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":110 46C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":111 46C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":112 46E text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":113 470 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":114 472 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":115 474 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":116 476 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":117 478 text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":118 47A text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/converter.c":24 47C text8 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":99 4BC text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":101 4BC text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":105 4C0 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":106 4C8 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":108 4CC text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":109 4D0 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":111 4D2 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":113 4F8 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":115 4F8 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":117 502 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":119 506 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":120 50A text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":122 50C text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":128 532 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":130 532 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":131 534 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":132 53A text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":133 558 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":132 564 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":137 56C text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":139 56C text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":141 56E text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":142 570 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":144 570 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":145 572 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":146 57A text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":148 57E text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":127 580 text0 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":188 596 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":191 596 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":192 598 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":193 59C text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":194 5A0 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":195 5A4 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":196 5A6 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":198 5AA text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":199 5AC text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":201 5B2 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":202 5CA text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":201 5D6 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":208 5DC text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":209 5E2 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":219 5E4 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":220 5E6 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":221 5E8 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":222 5EA text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":223 5EC text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":224 5EE text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":225 5F0 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":226 5F2 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":227 5F4 text1 CODE
+"/home/alexandre/7Robot/ChronoQboule/ChronoQboule.X/main.c":230 5F6 text1 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":8 5F8 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":14 5F8 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":15 600 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":16 608 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":17 60C text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":18 60E text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":19 614 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":17 616 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":22 61A text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":23 620 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":24 62C text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":25 634 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":27 636 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":28 63C text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":29 640 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":30 640 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":31 648 text5 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":8 64A text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":14 64A text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":15 652 text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":16 65A text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":17 65E text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":18 660 text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":19 666 text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":17 668 text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":22 66C text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":23 672 text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":24 67E text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":25 686 text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":27 688 text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":28 68E text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":29 692 text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":30 692 text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwdiv.c":31 69A text10 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":8 69C text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":13 69C text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":14 6A4 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":15 6A8 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":16 6AA text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":17 6B0 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":15 6B2 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":20 6B6 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":21 6C2 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":22 6CA text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":23 6D0 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":24 6D4 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":25 6D4 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":26 6DC text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":8 6DE text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":13 6DE text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":14 6E6 text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":15 6EA text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":16 6EC text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":17 6F2 text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":15 6F4 text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":20 6F8 text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":21 704 text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":22 70C text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":23 712 text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":24 716 text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":25 716 text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lwmod.c":26 71E text9 CODE
+"/tmp/cgtZW8caD":2070 720 cinit CODE
+"/tmp/cgtZW8caD":2072 720 cinit CODE
+"/tmp/cgtZW8caD":2075 720 cinit CODE
+"/tmp/cgtZW8caD":2109 720 cinit CODE
+"/tmp/cgtZW8caD":2110 722 cinit CODE
+"/tmp/cgtZW8caD":2111 724 cinit CODE
+"/tmp/cgtZW8caD":2112 726 cinit CODE
+"/tmp/cgtZW8caD":2113 728 cinit CODE
+"/tmp/cgtZW8caD":2114 72A cinit CODE
+"/tmp/cgtZW8caD":2119 72C cinit CODE
+"/tmp/cgtZW8caD":2120 72E cinit CODE
+"/tmp/cgtZW8caD":2121 730 cinit CODE
+"/tmp/cgtZW8caD":2122 732 cinit CODE
+"/tmp/cgtZW8caD":2123 734 cinit CODE
+"/tmp/cgtZW8caD":2124 736 cinit CODE
+"/tmp/cgtZW8caD":2125 738 cinit CODE
+"/tmp/cgtZW8caD":2126 73A cinit CODE
+"/tmp/cgtZW8caD":2132 73E cinit CODE
+"/tmp/cgtZW8caD":2134 73E cinit CODE
+"/tmp/cgtZW8caD":2135 740 cinit CODE
+"/tmp/cgtZW8caD":2136 742 cinit CODE
+"/tmp/cgtZW8caD":2137 744 cinit CODE
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -300,69 +464,72 @@ $dist/default/production/ChronoQboule.X.production.obj
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
+___lwdiv@dividend 1F 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __CFG_XINST$OFF 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-___awdiv@counter 5 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__size_ofi2_rafraichissement 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+___lwdiv@counter 25 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __S0 30000E 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-__S1 34 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+__S1 66 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __S2 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 _GIE 7F97 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 _PSA 7EAB 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Hintentry 0 0 ABS 0 intentry dist/default/production/ChronoQboule.X.production.obj
 __Lintentry 0 0 ABS 0 intentry dist/default/production/ChronoQboule.X.production.obj
-__end_of___awdiv 306 0 CODE 0 text5 dist/default/production/ChronoQboule.X.production.obj
 _TMR0 FD6 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+__end_ofi2_segments 4BC 0 CODE 0 text8 dist/default/production/ChronoQboule.X.production.obj
 _PEIE 7F96 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 _T0CS 7EAD 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-_time_converter 198 0 CODE 0 text3 dist/default/production/ChronoQboule.X.production.obj
-_time 28 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
-_main 406 0 CODE 0 text0 dist/default/production/ChronoQboule.X.production.obj
-__end_of_initialisation 47A 0 CODE 0 text1 dist/default/production/ChronoQboule.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/cgtzfc3Tq.obj
-start B0 0 CODE 0 init /tmp/cgtzfc3Tq.obj
+_time 36 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+_main 4BC 0 CODE 0 text0 dist/default/production/ChronoQboule.X.production.obj
+__end_of_initialisation 5F8 0 CODE 0 text1 dist/default/production/ChronoQboule.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/cgtKT91sV.obj
+start A8 0 CODE 0 init /tmp/cgtKT91sV.obj
 _T0PS0 7EA8 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 _T0PS1 7EA9 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-_dizaine_seconde 2D 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
 _T0PS2 7EAA 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 _TRISA F92 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-_balayage 2A 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+_balayage 38 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
 _TRISB F93 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 _TRISC F94 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 _PORTA F80 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Hirdata 0 0 CODE 0 irdata dist/default/production/ChronoQboule.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production/ChronoQboule.X.production.obj
-_PORTC F82 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __HRAM 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __LRAM 1 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production/ChronoQboule.X.production.obj
 __Lconfig 300000 0 CONFIG 0 config dist/default/production/ChronoQboule.X.production.obj
-main@a 26 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
-?___awmod 9 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
-main@k 24 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__size_ofi2_segments 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+?___lwmod 26 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production/ChronoQboule.X.production.obj
 __Lbigram 0 0 ABS 0 bigram dist/default/production/ChronoQboule.X.production.obj
 __Hrparam 0 0 ABS 0 rparam dist/default/production/ChronoQboule.X.production.obj
 __Lrparam 0 0 ABS 0 rparam dist/default/production/ChronoQboule.X.production.obj
+main@y 60 0 BANK0 1 cstackBANK0 dist/default/production/ChronoQboule.X.production.obj
 __Hram 0 0 ABS 0 ram dist/default/production/ChronoQboule.X.production.obj
 __Lram 0 0 ABS 0 ram dist/default/production/ChronoQboule.X.production.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production/ChronoQboule.X.production.obj
+main@razdisplay 64 0 BANK0 1 cstackBANK0 dist/default/production/ChronoQboule.X.production.obj
 __Lcomram 0 0 ABS 0 comram dist/default/production/ChronoQboule.X.production.obj
 __size_of_rafraichissement 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Hsfr 0 0 ABS 0 sfr dist/default/production/ChronoQboule.X.production.obj
 __Lsfr 0 0 ABS 0 sfr dist/default/production/ChronoQboule.X.production.obj
 __Hbss 0 0 RAM 1 bss dist/default/production/ChronoQboule.X.production.obj
 __Lbss 0 0 RAM 1 bss dist/default/production/ChronoQboule.X.production.obj
-segments@figure 1 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+segments@figure 1F 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production/ChronoQboule.X.production.obj
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production/ChronoQboule.X.production.obj
+_ANCON0 F5D 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+_ADCON1 FC1 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/ChronoQboule.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/ChronoQboule.X.production.obj
 _TMR0IE 7F95 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/ChronoQboule.X.production.obj
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/ChronoQboule.X.production.obj
 _TMR0IF 7F92 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+_RCONbits FD0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+i2___lwmod@dividend 8 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/ChronoQboule.X.production.obj
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production/ChronoQboule.X.production.obj
-?___awdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Hintret 0 0 ABS 0 intret dist/default/production/ChronoQboule.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production/ChronoQboule.X.production.obj
 __Hramtop F00 0 RAM 0 ramtop dist/default/production/ChronoQboule.X.production.obj
@@ -373,9 +540,10 @@ __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/ChronoQboule.X.productio
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production/ChronoQboule.X.production.obj
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/ChronoQboule.X.production.obj
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/ChronoQboule.X.production.obj
+?___lwdiv 1F 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production/ChronoQboule.X.production.obj
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production/ChronoQboule.X.production.obj
-__Hintcode B0 0 CODE 0 intcode dist/default/production/ChronoQboule.X.production.obj
+__Hintcode A8 0 CODE 0 intcode dist/default/production/ChronoQboule.X.production.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production/ChronoQboule.X.production.obj
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production/ChronoQboule.X.production.obj
 _TMR0ON 7EAF 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
@@ -385,40 +553,50 @@ _T08BIT 7EAE 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Habs1 0 0 ABS 0 abs1 dist/default/production/ChronoQboule.X.production.obj
 __Labs1 0 0 ABS 0 abs1 dist/default/production/ChronoQboule.X.production.obj
 _INTCON FF2 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-_segments B4 0 CODE 0 text7 dist/default/production/ChronoQboule.X.production.obj
+i2___lwmod@counter C 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+_segments 2F4 0 CODE 0 text3 dist/default/production/ChronoQboule.X.production.obj
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/ChronoQboule.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/ChronoQboule.X.production.obj
-_centaine_milliseconde 2B 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
-__end_of___awmod 396 0 CODE 0 text4 dist/default/production/ChronoQboule.X.production.obj
-_old_state 30 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__end_ofi2_rafraichissement 2F4 0 CODE 0 text7 dist/default/production/ChronoQboule.X.production.obj
+i2rafraichissement@afficheur D 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+main@y_193 62 0 BANK0 1 cstackBANK0 dist/default/production/ChronoQboule.X.production.obj
+i2___lwmod 6DE 0 CODE 0 text9 dist/default/production/ChronoQboule.X.production.obj
+_old_state 3A 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__end_ofi2___lwdiv 69C 0 CODE 0 text10 dist/default/production/ChronoQboule.X.production.obj
 __Hdata 0 0 ABS 0 data dist/default/production/ChronoQboule.X.production.obj
 __Ldata 0 0 ABS 0 data dist/default/production/ChronoQboule.X.production.obj
-_stance 32 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
-__size_of_time_converter 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-stackhi 9FF 0 ABS 0 - /tmp/cgtzfc3Tq.obj
-___awmod@sign E 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+_stance 3C 0 COMRAM 1 dataCOMRAM dist/default/production/ChronoQboule.X.production.obj
+stackhi 9FF 0 ABS 0 - /tmp/cgtKT91sV.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/ChronoQboule.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/ChronoQboule.X.production.obj
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production/ChronoQboule.X.production.obj
 __Htemp 0 0 COMRAM 1 temp dist/default/production/ChronoQboule.X.production.obj
 __Ltemp 0 0 COMRAM 1 temp dist/default/production/ChronoQboule.X.production.obj
-stacklo 60 0 ABS 0 - /tmp/cgtzfc3Tq.obj
+stacklo 66 0 ABS 0 - /tmp/cgtKT91sV.obj
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production/ChronoQboule.X.production.obj
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production/ChronoQboule.X.production.obj
-__Hinit B0 0 CODE 0 init dist/default/production/ChronoQboule.X.production.obj
-__Linit B0 0 CODE 0 init dist/default/production/ChronoQboule.X.production.obj
-__end_of_segments 198 0 CODE 0 text7 dist/default/production/ChronoQboule.X.production.obj
-__Hintcodelo B0 0 CODE 0 intcodelo dist/default/production/ChronoQboule.X.production.obj
-__Lintcodelo B0 0 CODE 0 intcodelo dist/default/production/ChronoQboule.X.production.obj
+__Hinit A8 0 CODE 0 init dist/default/production/ChronoQboule.X.production.obj
+__Linit A8 0 CODE 0 init dist/default/production/ChronoQboule.X.production.obj
+__end_of_segments 3D8 0 CODE 0 text3 dist/default/production/ChronoQboule.X.production.obj
+__Hintcodelo A8 0 CODE 0 intcodelo dist/default/production/ChronoQboule.X.production.obj
+__Lintcodelo A8 0 CODE 0 intcodelo dist/default/production/ChronoQboule.X.production.obj
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production/ChronoQboule.X.production.obj
-__end_of_main 450 0 CODE 0 text0 dist/default/production/ChronoQboule.X.production.obj
+__end_of_main 596 0 CODE 0 text0 dist/default/production/ChronoQboule.X.production.obj
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production/ChronoQboule.X.production.obj
-_valeur 33 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+_valeur 3B 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Htext 0 0 ABS 0 text dist/default/production/ChronoQboule.X.production.obj
 __Ltext 0 0 ABS 0 text dist/default/production/ChronoQboule.X.production.obj
-end_of_initialization 486 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
-___awdiv@sign 6 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+end_of_initialization 73E 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
+_INTEDG0 7F8E 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+i2___lwdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+i2_rafraichissement 1D0 0 CODE 0 text7 dist/default/production/ChronoQboule.X.production.obj
+initialisation@razdisplay 2F 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+i2___lwdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 _PORTCbits F82 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production/ChronoQboule.X.production.obj
+i2___lwdiv 64A 0 CODE 0 text10 dist/default/production/ChronoQboule.X.production.obj
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production/ChronoQboule.X.production.obj
-_initialisation 450 0 CODE 0 text1 dist/default/production/ChronoQboule.X.production.obj
+_initialisation 596 0 CODE 0 text1 dist/default/production/ChronoQboule.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/default/production/ChronoQboule.X.production.obj
 __Lifardata 0 0 CODE 0 ifardata dist/default/production/ChronoQboule.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 dist/default/production/ChronoQboule.X.production.obj
@@ -433,11 +611,11 @@ __Hbank4 0 0 ABS 0 bank4 dist/default/production/ChronoQboule.X.production.obj
 __Lbank4 0 0 ABS 0 bank4 dist/default/production/ChronoQboule.X.production.obj
 __Hbank5 0 0 ABS 0 bank5 dist/default/production/ChronoQboule.X.production.obj
 __Lbank5 0 0 ABS 0 bank5 dist/default/production/ChronoQboule.X.production.obj
-__Hpowerup B0 0 CODE 0 powerup dist/default/production/ChronoQboule.X.production.obj
-__Lpowerup B0 0 CODE 0 powerup dist/default/production/ChronoQboule.X.production.obj
+__Hpowerup A8 0 CODE 0 powerup dist/default/production/ChronoQboule.X.production.obj
+__Lpowerup A8 0 CODE 0 powerup dist/default/production/ChronoQboule.X.production.obj
 __Hbank6 0 0 ABS 0 bank6 dist/default/production/ChronoQboule.X.production.obj
 __Lbank6 0 0 ABS 0 bank6 dist/default/production/ChronoQboule.X.production.obj
-_front_montant 2E 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+_front_montant 39 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Hbank7 0 0 ABS 0 bank7 dist/default/production/ChronoQboule.X.production.obj
 __Lbank7 0 0 ABS 0 bank7 dist/default/production/ChronoQboule.X.production.obj
 __Hbank8 0 0 ABS 0 bank8 dist/default/production/ChronoQboule.X.production.obj
@@ -449,49 +627,59 @@ __Hbank9 0 0 ABS 0 bank9 dist/default/production/ChronoQboule.X.production.obj
 __Lbank9 0 0 ABS 0 bank9 dist/default/production/ChronoQboule.X.production.obj
 __Htext1 0 0 ABS 0 text1 dist/default/production/ChronoQboule.X.production.obj
 __Ltext1 0 0 ABS 0 text1 dist/default/production/ChronoQboule.X.production.obj
-__ptext0 406 0 CODE 0 text0 dist/default/production/ChronoQboule.X.production.obj
-__ptext1 450 0 CODE 0 text1 dist/default/production/ChronoQboule.X.production.obj
+__ptext0 4BC 0 CODE 0 text0 dist/default/production/ChronoQboule.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production/ChronoQboule.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production/ChronoQboule.X.production.obj
+__ptext1 596 0 CODE 0 text1 dist/default/production/ChronoQboule.X.production.obj
 __Htext3 0 0 ABS 0 text3 dist/default/production/ChronoQboule.X.production.obj
 __Ltext3 0 0 ABS 0 text3 dist/default/production/ChronoQboule.X.production.obj
+__ptext2 AC 0 CODE 0 text2 dist/default/production/ChronoQboule.X.production.obj
 __Htext4 0 0 ABS 0 text4 dist/default/production/ChronoQboule.X.production.obj
 __Ltext4 0 0 ABS 0 text4 dist/default/production/ChronoQboule.X.production.obj
-__ptext3 198 0 CODE 0 text3 dist/default/production/ChronoQboule.X.production.obj
+__ptext3 2F4 0 CODE 0 text3 dist/default/production/ChronoQboule.X.production.obj
 __Htext5 0 0 ABS 0 text5 dist/default/production/ChronoQboule.X.production.obj
 __Ltext5 0 0 ABS 0 text5 dist/default/production/ChronoQboule.X.production.obj
-__ptext4 306 0 CODE 0 text4 dist/default/production/ChronoQboule.X.production.obj
-__Htext6 0 0 ABS 0 text6 dist/default/production/ChronoQboule.X.production.obj
-__Ltext6 0 0 ABS 0 text6 dist/default/production/ChronoQboule.X.production.obj
-__ptext5 262 0 CODE 0 text5 dist/default/production/ChronoQboule.X.production.obj
+__ptext4 69C 0 CODE 0 text4 dist/default/production/ChronoQboule.X.production.obj
+__ptext5 5F8 0 CODE 0 text5 dist/default/production/ChronoQboule.X.production.obj
 __Htext7 0 0 ABS 0 text7 dist/default/production/ChronoQboule.X.production.obj
 __Ltext7 0 0 ABS 0 text7 dist/default/production/ChronoQboule.X.production.obj
-__ptext6 396 0 CODE 0 text6 dist/default/production/ChronoQboule.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
-__ptext7 B4 0 CODE 0 text7 dist/default/production/ChronoQboule.X.production.obj
-__pbssCOMRAM 28 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production/ChronoQboule.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production/ChronoQboule.X.production.obj
+__ptext7 1D0 0 CODE 0 text7 dist/default/production/ChronoQboule.X.production.obj
+__pbssCOMRAM 36 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production/ChronoQboule.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production/ChronoQboule.X.production.obj
+__ptext8 3D8 0 CODE 0 text8 dist/default/production/ChronoQboule.X.production.obj
+__ptext9 6DE 0 CODE 0 text9 dist/default/production/ChronoQboule.X.production.obj
+__end_ofi2___lwmod 720 0 CODE 0 text9 dist/default/production/ChronoQboule.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production/ChronoQboule.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production/ChronoQboule.X.production.obj
-__end_of__initialization 486 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
-_rafraichissement 396 0 CODE 0 text6 dist/default/production/ChronoQboule.X.production.obj
+__end_of__initialization 73E 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
+i2___lwmod@divisor A 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+_rafraichissement AC 0 CODE 0 text2 dist/default/production/ChronoQboule.X.production.obj
+__end_of___lwdiv 64A 0 CODE 0 text5 dist/default/production/ChronoQboule.X.production.obj
+?i2___lwmod 8 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Hidata 0 0 CODE 0 idata dist/default/production/ChronoQboule.X.production.obj
 __Lidata 0 0 CODE 0 idata dist/default/production/ChronoQboule.X.production.obj
 __Hrdata 0 0 COMRAM 1 rdata dist/default/production/ChronoQboule.X.production.obj
 __size_of_initialisation 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Lrdata 0 0 COMRAM 1 rdata dist/default/production/ChronoQboule.X.production.obj
-_seconde 31 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Hidloc 200008 0 IDLOC 0 idloc dist/default/production/ChronoQboule.X.production.obj
 __Lidloc 200000 0 IDLOC 0 idloc dist/default/production/ChronoQboule.X.production.obj
 __Hstack 0 0 STACK 2 stack dist/default/production/ChronoQboule.X.production.obj
 __Lstack 0 0 STACK 2 stack dist/default/production/ChronoQboule.X.production.obj
-___awmod 306 0 CODE 0 text4 dist/default/production/ChronoQboule.X.production.obj
+___lwmod 69C 0 CODE 0 text4 dist/default/production/ChronoQboule.X.production.obj
 __Hparam 0 0 ABS 0 rparam dist/default/production/ChronoQboule.X.production.obj
 __Lparam 0 0 ABS 0 rparam dist/default/production/ChronoQboule.X.production.obj
 __Hspace_0 30000E 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Lspace_0 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
-__Hspace_1 34 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+__Hspace_1 66 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Lspace_1 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production/ChronoQboule.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production/ChronoQboule.X.production.obj
@@ -501,57 +689,73 @@ __Hnvbit 0 0 COMRAM 1 nvbit dist/default/production/ChronoQboule.X.production.ob
 __Lnvbit 0 0 COMRAM 1 nvbit dist/default/production/ChronoQboule.X.production.obj
 __Hcinit 0 0 ABS 0 cinit dist/default/production/ChronoQboule.X.production.obj
 __Lcinit 0 0 ABS 0 cinit dist/default/production/ChronoQboule.X.production.obj
-__pcinit 47A 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
-___awdiv 262 0 CODE 0 text5 dist/default/production/ChronoQboule.X.production.obj
-__ramtop F00 0 RAM 0 ramtop /tmp/cgtzfc3Tq.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/cgtzfc3Tq.obj
-_dizaine_milliseconde 2C 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__pcinit 720 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+__ramtop F00 0 RAM 0 ramtop /tmp/cgtKT91sV.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/cgtKT91sV.obj
+___lwdiv 5F8 0 CODE 0 text5 dist/default/production/ChronoQboule.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Hconst 0 0 CODE 0 const dist/default/production/ChronoQboule.X.production.obj
 __Lconst 0 0 CODE 0 const dist/default/production/ChronoQboule.X.production.obj
-_milliseconde 2F 0 COMRAM 1 bssCOMRAM dist/default/production/ChronoQboule.X.production.obj
+i2segments@figure 1 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+i2___lwdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __Hbank10 0 0 ABS 0 bank10 dist/default/production/ChronoQboule.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 dist/default/production/ChronoQboule.X.production.obj
 __Hbank11 0 0 ABS 0 bank11 dist/default/production/ChronoQboule.X.production.obj
 __Lbank11 0 0 ABS 0 bank11 dist/default/production/ChronoQboule.X.production.obj
-__end_of_rafraichissement 406 0 CODE 0 text6 dist/default/production/ChronoQboule.X.production.obj
+__end_of_rafraichissement 1D0 0 CODE 0 text2 dist/default/production/ChronoQboule.X.production.obj
 __Hbank12 0 0 ABS 0 bank12 dist/default/production/ChronoQboule.X.production.obj
 __Lbank12 0 0 ABS 0 bank12 dist/default/production/ChronoQboule.X.production.obj
 __Hbank13 0 0 ABS 0 bank13 dist/default/production/ChronoQboule.X.production.obj
 __Lbank13 0 0 ABS 0 bank13 dist/default/production/ChronoQboule.X.production.obj
 __Hbank14 0 0 ABS 0 bank14 dist/default/production/ChronoQboule.X.production.obj
 __Lbank14 0 0 ABS 0 bank14 dist/default/production/ChronoQboule.X.production.obj
-__size_of___awdiv 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-___inthi_sp 0 0 STACK 2 stack /tmp/cgtzfc3Tq.obj
-___awmod@divisor B 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
-___intlo_sp 0 0 STACK 2 stack /tmp/cgtzfc3Tq.obj
-__end_of_low_interrupt B0 0 CODE 0 intcode dist/default/production/ChronoQboule.X.production.obj
-__Hend_init B4 0 CODE 0 end_init dist/default/production/ChronoQboule.X.production.obj
-__Lend_init B0 0 CODE 0 end_init dist/default/production/ChronoQboule.X.production.obj
-___awdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst /tmp/cgtzfc3Tq.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production/ChronoQboule.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production/ChronoQboule.X.production.obj
+__ptext10 64A 0 CODE 0 text10 dist/default/production/ChronoQboule.X.production.obj
+__CFG_SOSCSEL$DIG 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+___inthi_sp 0 0 STACK 2 stack /tmp/cgtKT91sV.obj
+__end_of___lwmod 6DE 0 CODE 0 text4 dist/default/production/ChronoQboule.X.production.obj
+___lwmod@divisor 28 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__CFG_WDTEN$OFF 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+___intlo_sp 0 0 STACK 2 stack /tmp/cgtKT91sV.obj
+__end_of_low_interrupt A8 0 CODE 0 intcode dist/default/production/ChronoQboule.X.production.obj
+__Hend_init AC 0 CODE 0 end_init dist/default/production/ChronoQboule.X.production.obj
+__Lend_init A8 0 CODE 0 end_init dist/default/production/ChronoQboule.X.production.obj
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/ChronoQboule.X.production.obj
+___lwdiv@divisor 21 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__pidataCOMRAM 748 0 CODE 0 idataCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__smallconst 0 0 SMALLCONST 0 smallconst /tmp/cgtKT91sV.obj
+?i2___lwdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production/ChronoQboule.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production/ChronoQboule.X.production.obj
-__accesstop 60 0 ABS 0 - /tmp/cgtzfc3Tq.obj
+__accesstop 60 0 ABS 0 - /tmp/cgtKT91sV.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production/ChronoQboule.X.production.obj
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production/ChronoQboule.X.production.obj
-intlevel0 0 0 CODE 0 text /tmp/cgtzfc3Tq.obj
-intlevel1 0 0 CODE 0 text /tmp/cgtzfc3Tq.obj
-intlevel2 0 0 CODE 0 text /tmp/cgtzfc3Tq.obj
-intlevel3 0 0 CODE 0 text /tmp/cgtzfc3Tq.obj
-time_converter@time F 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
-start_initialization 47A 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
-___awdiv@quotient 7 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+intlevel0 0 0 CODE 0 text /tmp/cgtKT91sV.obj
+intlevel1 0 0 CODE 0 text /tmp/cgtKT91sV.obj
+intlevel2 0 0 CODE 0 text /tmp/cgtKT91sV.obj
+intlevel3 0 0 CODE 0 text /tmp/cgtKT91sV.obj
+i2_segments 3D8 0 CODE 0 text8 dist/default/production/ChronoQboule.X.production.obj
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+__pdataCOMRAM 3C 0 COMRAM 1 dataCOMRAM dist/default/production/ChronoQboule.X.production.obj
+start_initialization 720 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
+___lwdiv@quotient 23 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __size_of_low_interrupt 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-__size_of___awmod 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-__initialization 47A 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
-rafraichissement@afficheur 2 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
-___awmod@dividend 9 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+i2___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__initialization 720 0 CODE 0 cinit dist/default/production/ChronoQboule.X.production.obj
+__size_ofi2___lwmod 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+__size_ofi2___lwdiv 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
+rafraichissement@afficheur 2B 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+___lwmod@dividend 26 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 __activetblptr 2 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-___awmod@counter D 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+___lwmod@counter 2A 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
 __size_of_segments 0 0 ABS 0 - dist/default/production/ChronoQboule.X.production.obj
-__end_of_time_converter 262 0 CODE 0 text3 dist/default/production/ChronoQboule.X.production.obj
-___awdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -577,7 +781,8 @@ ___awdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/ChronoQboule
 # All other numeric quantities are in decimal.
 %SEGMENTS
 reset_vec 0 0 0 4 1
-intcode 0 8 8 488 1
+intcode 0 8 8 741 1
 config 0 300000 300000 E 1
 idloc 0 200000 200000 8 1
-cstackCOMRAM 1 1 1 33 1
+cstackCOMRAM 1 1 1 3C 1
+cstackBANK0 1 60 60 6 1
