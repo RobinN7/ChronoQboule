@@ -96,6 +96,7 @@ void interrupt bouton() {
 
 }
  */
+
 int main(int argc, char** argv) {
 
     initialisation();
@@ -105,49 +106,50 @@ int main(int argc, char** argv) {
         if ((PORTCbits.RC0 == 1) && (old_state == 0)) {
             old_state = 1;
 
-            if(stance!=1){
-            stance++;
+            if (stance != 1) {
+                stance++;
             }
-            for (int y =0 ; y<10000;y++){}
-            
-        }
-        
-        if ((PORTCbits.RC0 == 0) && (old_state ==1)) {
+            for (int delay = 0; delay < 10000; delay++) {
+            }
 
+        }
+
+        if ((PORTCbits.RC0 == 0) && (old_state == 1)) {
             old_state = 0;
 
-            if(stance==1){
-            stance++;
+            if (stance == 1) {
+                stance++;
             }
-            for (int y =0 ; y<10000;y++){}
-            
+            for (int delay = 0; delay < 10000; delay++) {
+            }
+
         }
 
 
-            switch (stance) {
-                case 1:
-                {
-                    TMR0ON = 0;
-                    segments(0);
-                    for (int razdisplay = 0; razdisplay < 5; razdisplay++) {
-                        rafraichissement(razdisplay);
-                    }
+        switch (stance) {
+            case 1: //affichage d'accueil en attente d'un appui
+            {
+                TMR0ON = 0;
+                segments(0);
+                for (int razdisplay = 0; razdisplay < 5; razdisplay++) {
+                    rafraichissement(razdisplay);
                 }
-                    break; //affichage d'accueil en attente d'un appui
-                case 2:
-                {
-                    TMR0ON = 1; //Now start the timer!
-                }
-                    break; //départ du chrono
-                case 3:
-                {
-                    TMR0ON = 0;
-                    time = 0;
-                    stance=0;
-                }
-                    break; //arret du chrono
-                default:;
             }
+                break; 
+            case 2: //départ du chrono
+            {
+                TMR0ON = 1; //Now start the timer!
+            }
+                break; 
+            case 3: //arret du chrono
+            {
+                TMR0ON = 0;
+                time = 0;
+                stance = 0;
+            }
+                break; 
+            default:;
+        }
 
 
     }
