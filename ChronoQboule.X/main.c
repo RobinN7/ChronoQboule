@@ -145,6 +145,7 @@ int main(int argc, char** argv) {
             {
                 TMR0ON = 0;
                 time = 0;
+                for (long int delay = 0; delay < 120000; delay++) { }
                 stance = 0;
             }
                 break; 
